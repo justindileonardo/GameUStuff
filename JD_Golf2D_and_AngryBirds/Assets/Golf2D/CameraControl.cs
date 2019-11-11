@@ -13,6 +13,17 @@ public class CameraControl : MonoBehaviour
         
     }
 
+    void FixedUpdate()
+    {
+        //lerps camera to ball when ball is moving
+        if (target.GetComponent<BallControl>().launched == true && target.GetComponent<BallControl>().death == false)
+        {
+            float interpolation = lerpSpeed * Time.deltaTime;
+            Vector3 position = this.transform.position;
+            position.x = Mathf.Lerp(transform.position.x, target.transform.position.x, interpolation);
+            transform.position = position;
+        }
+    }
     // Update is called once per frame
     void Update()
     {
@@ -36,14 +47,7 @@ public class CameraControl : MonoBehaviour
             }
         }
 
-        //lerps camera to ball when ball is moving
-        if (target.GetComponent<BallControl>().launched == true && target.GetComponent<BallControl>().death == false)
-        {
-            float interpolation = lerpSpeed * Time.deltaTime;
-            Vector3 position = this.transform.position;
-            position.x = Mathf.Lerp(transform.position.x, target.transform.position.x, interpolation);
-            transform.position = position;
-        }
+        
         
     }
 }

@@ -1189,7 +1189,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7ca48d05a0de1e4c897d760811e5786, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  usingMouseSlingShot: 1
+  usingMouseSlingShot: 0
   force: 0
   forceMultiplier: 20
   rotationSpeed: 1
