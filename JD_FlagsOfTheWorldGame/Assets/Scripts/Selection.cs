@@ -6,7 +6,7 @@ public class Selection : MonoBehaviour
 {
 
     public GameObject currentGeography, temporaryGeography;
-
+    public Animator animFlagsBox;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,7 +30,7 @@ public class Selection : MonoBehaviour
             RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
 
             //if you hit something (not nothing)
-            if(hit.collider != null)
+            if (hit.collider != null)
             {
                 //if it's not the first click (if you have something selected already)
                 if (currentGeography != null)
@@ -41,17 +41,14 @@ public class Selection : MonoBehaviour
                     currentGeography = hit.collider.gameObject;
                     currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
                     //if the geographies you clicked are different (different positions), make the temporary geography back to white
-                    if(currentGeography.transform.position != temporaryGeography.transform.position)
+                    if (currentGeography.transform.position != temporaryGeography.transform.position)
                     {
                         temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
                     }
                     //deselect selection if you click the same geography you already have selected
-                    if(currentGeography.transform.position == temporaryGeography.transform.position)
+                    if (currentGeography.transform.position == temporaryGeography.transform.position)
                     {
-                        currentGeography.GetComponent<SpriteRenderer>().color = Color.white;
-                        temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
-                        currentGeography = null;
-                        temporaryGeography = null;
+                        Deselect();
                     }
                 }
                 //if first click (nothing selected)
@@ -60,12 +57,30 @@ public class Selection : MonoBehaviour
                     //just make the selection yellow
                     currentGeography = hit.collider.gameObject;
                     currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    animFlagsBox.SetBool("HasASelection", true);
                 }
             }
-        }
-        
-        
 
-        
+
+
+
+        }
+
     }
+
+    public void Deselect()
+    {
+        if(currentGeography != null)
+        {
+            currentGeography.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        if(temporaryGeography != null)
+        {
+            temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        currentGeography = null;
+        temporaryGeography = null;
+        animFlagsBox.SetBool("HasASelection", false);
+    }
+
 }
