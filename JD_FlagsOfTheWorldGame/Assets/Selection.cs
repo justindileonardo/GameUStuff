@@ -1,0 +1,71 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+public class Selection : MonoBehaviour
+{
+
+    public GameObject currentGeography, temporaryGeography;
+
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        SelectGeography();
+    }
+
+    public void SelectGeography()
+    {
+        //click left click
+        if(Input.GetMouseButtonDown(0))
+        {
+            //raycast to click on an object
+            Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos2D = new Vector2(mousePos.x, mousePos.y);
+            RaycastHit2D hit = Physics2D.Raycast(mousePos2D, Vector2.zero);
+
+            //if you hit something (not nothing)
+            if(hit.collider != null)
+            {
+                //if it's not the first click (if you have something selected already)
+                if (currentGeography != null)
+                {
+                    //set a temporary selection as the geography you clicked last time
+                    temporaryGeography = currentGeography;
+                    //then set the new clicked geography as the currentGeography and change color to yellow
+                    currentGeography = hit.collider.gameObject;
+                    currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
+                    //if the geographies you clicked are different (different positions), make the temporary geography back to white
+                    if(currentGeography.transform.position != temporaryGeography.transform.position)
+                    {
+                        temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
+                    }
+                    //deselect selection if you click the same geography you already have selected
+                    if(currentGeography.transform.position == temporaryGeography.transform.position)
+                    {
+                        currentGeography.GetComponent<SpriteRenderer>().color = Color.white;
+                        temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
+                        currentGeography = null;
+                        temporaryGeography = null;
+                    }
+                }
+                //if first click (nothing selected)
+                else
+                {
+                    //just make the selection yellow
+                    currentGeography = hit.collider.gameObject;
+                    currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
+                }
+            }
+        }
+        
+        
+
+        
+    }
+}
