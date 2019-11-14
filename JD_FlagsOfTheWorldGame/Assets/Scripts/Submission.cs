@@ -9,6 +9,7 @@ public class Submission : MonoBehaviour
     private Selection selectionScript;
     bool correct;
     public Text text_countryNamePopup;
+    public bool fadingText;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,10 +19,11 @@ public class Submission : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(text_countryNamePopup.color.a > 0)
+        if(text_countryNamePopup.color.a > 0 && fadingText == true)
         {
-            text_countryNamePopup.color = new Color(0, 0, 0, text_countryNamePopup.color.a - 0.005f);
+            text_countryNamePopup.color = new Color(0, 0, 0, text_countryNamePopup.color.a - 0.025f);
         }
+        
         
         
     }
@@ -60,12 +62,19 @@ public class Submission : MonoBehaviour
     {
         if(correct == true)
         {
+            fadingText = false;
             text_countryNamePopup.enabled = true;
             text_countryNamePopup.text = countryName;
             text_countryNamePopup.color = new Color(0, 0, 0, 1);
+            StartCoroutine(FadeText());
         }
         
     }
 
+    IEnumerator FadeText()
+    {
+        yield return new WaitForSeconds(1.0f);
+        fadingText = true;
+    }
     
 }

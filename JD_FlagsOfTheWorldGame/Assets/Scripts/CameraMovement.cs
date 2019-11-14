@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.SceneManagement;
 public class CameraMovement : MonoBehaviour
 {
     //Camera Zoom
@@ -13,6 +13,7 @@ public class CameraMovement : MonoBehaviour
     private Vector3 Origin;
     private Vector3 Diference;
     private bool Drag = false;
+    public int screenMax;
 
     // Start is called before the first frame update
     void Start()
@@ -40,6 +41,14 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
+        if(SceneManager.GetActiveScene().name == "NorthAmerica")
+        {
+            if(transform.position.x < ResetCamera.x - screenMax || transform.position.x > ResetCamera.x + screenMax || transform.position.y < ResetCamera.y - screenMax || transform.position.y > ResetCamera.y + screenMax)
+            {
+                Camera.main.transform.position = ResetCamera;
+            }
+        }
+        
         
     }
 
@@ -64,10 +73,10 @@ public class CameraMovement : MonoBehaviour
             Camera.main.transform.position = Origin - Diference;
         }
         //RESET CAMERA TO STARTING POSITION WITH RIGHT CLICK
-        /*if (Input.GetMouseButton(1))
+        if (Input.GetMouseButton(1))
         {
             Camera.main.transform.position = ResetCamera;
-        }*/
+        }
     }
 
 }
