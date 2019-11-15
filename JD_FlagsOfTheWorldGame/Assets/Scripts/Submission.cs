@@ -12,11 +12,12 @@ public class Submission : MonoBehaviour
     public GameObject[] lives_hearts;
     bool correct;
     int wrongSubmissions, correctSubmissions;
-    public Text text_countryNamePopup, text_wrongSubmissions, text_levelCompleted;
+    public Text text_countryNamePopup, text_wrongSubmissions, text_levelCompleted, text_levelFailed;
     public bool fadingText;
     public Color flashRed;
-    public AudioSource successSound, wrongSound, completeLevelSound;
-    public GameObject CompleteLevelButton;
+    public AudioSource successSound, wrongSound, completeLevelSound, failLevelSound;
+    public GameObject CompleteLevelButton, RestartLevelButton, MainMenuFailButton;
+    public PolygonCollider2D[] countriesColliders;
     // Start is called before the first frame update
     void Start()
     {
@@ -82,8 +83,7 @@ public class Submission : MonoBehaviour
             StartCoroutine(FlashRed());
             if(lives <= 0)
             {
-                //fail level
-                print("game over");
+                StartCoroutine(FailLevel());
             }
             //selectionScript.Deselect();
         }
@@ -147,6 +147,28 @@ public class Submission : MonoBehaviour
         CompleteLevelButton.SetActive(true);
         completeLevelSound.Play();
         text_levelCompleted.enabled = true;
+    }
+
+    IEnumerator FailLevel()
+    {
+        for(int i = 0; i<countriesColliders.Length; i++)
+        {
+            countriesColliders[i].enabled = false;
+        }
+        yield return new WaitForSeconds(1.0f);
+        failLevelSound.Play();
+        text_levelFailed.enabled = true;
+        RestartLevelButton.SetActive(true);
+        MainMenuFailButton.SetActive(true);
+    }
+
+    public void RestartLevel()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+    public void FailMainMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
     }
 
     //adjusting the lives images
