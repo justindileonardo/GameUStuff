@@ -3,26 +3,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class Submission : MonoBehaviour
 {
     private Selection selectionScript;
+    public int numberOfCountries;
+    public int lives;
+    public GameObject[] lives_hearts;
     bool correct;
-    public Text text_countryNamePopup;
+    int wrongSubmissions, correctSubmissions;
+    public Text text_countryNamePopup, text_wrongSubmissions, text_levelCompleted;
     public bool fadingText;
+    public Color flashRed;
+    public AudioSource successSound, wrongSound, completeLevelSound;
+    public GameObject CompleteLevelButton;
     // Start is called before the first frame update
     void Start()
     {
         selectionScript = GameObject.Find("SelectionScript").GetComponent<Selection>();
+        //testing
+        //correctSubmissions = 23;
     }
 
     // Update is called once per frame
     void Update()
     {
+        //fade the country name text
         if(text_countryNamePopup.color.a > 0 && fadingText == true)
         {
             text_countryNamePopup.color = new Color(0, 0, 0, text_countryNamePopup.color.a - 0.025f);
         }
+        
+        //update wrong text
+        text_wrongSubmissions.text = "Wrong: " + wrongSubmissions;
         
         
         
@@ -33,18 +46,52 @@ public class Submission : MonoBehaviour
         //if you select right country's flag...
         if(selectionScript.currentGeography == correctCountry)
         {
-            print("correct!");
+            //print("correct!");
             correct = true;
+            correctSubmissions ++;
+            if(correctSubmissions >= numberOfCountries)
+            {
+                StartCoroutine(FinishLevel());
+            }
+            successSound.Play();
+            selectionScript.currentGeography.SetActive(false);
             selectionScript.Deselect();
         }
         //if you select wrong country's flag...
         else
         {
-            print("WRONG!!!");
+            //print("WRONG!!!");
+            wrongSubmissions ++;
+            lives--;
+            SetLives();
             correct = false;
-            selectionScript.Deselect();
+            wrongSound.Play();
+            StartCoroutine(FlashRed());
+            if(lives <= 0)
+            {
+                //fail level
+                print("game over");
+            }
+            //selectionScript.Deselect();
         }
     }
+
+    //flashing the country red a few times when choosing the wrong flag
+    IEnumerator FlashRed()
+    {
+        selectionScript.currentGeography.GetComponent<SpriteRenderer>().color = flashRed;
+        yield return new WaitForSeconds(0.1f);
+        selectionScript.currentGeography.GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(0.1f);
+        selectionScript.currentGeography.GetComponent<SpriteRenderer>().color = flashRed;
+        yield return new WaitForSeconds(0.1f);
+        selectionScript.currentGeography.GetComponent<SpriteRenderer>().color = Color.white;
+        yield return new WaitForSeconds(0.025f);
+        selectionScript.Deselect();
+    }
+
+
+    //selecting the correct flag, turning the flag on
     public void TurnColorOn(SpriteRenderer countrySpriteColor)
     {
         //if you select right country's flag
@@ -58,6 +105,7 @@ public class Submission : MonoBehaviour
         
     }
 
+    //Changing the text to be the correct country's name
     public void TextCountryName(string countryName)
     {
         if(correct == true)
@@ -67,14 +115,54 @@ public class Submission : MonoBehaviour
             text_countryNamePopup.text = countryName;
             text_countryNamePopup.color = new Color(0, 0, 0, 1);
             StartCoroutine(FadeText());
+            
         }
         
     }
 
+    //fading the country's name text 
     IEnumerator FadeText()
     {
         yield return new WaitForSeconds(1.0f);
         fadingText = true;
+    }
+    
+    //Finishing the level, enabling things after a delay
+    IEnumerator FinishLevel()
+    {
+        yield return new WaitForSeconds(2.0f);
+        CompleteLevelButton.SetActive(true);
+        completeLevelSound.Play();
+        text_levelCompleted.enabled = true;
+    }
+
+    //adjusting the lives images
+    public void SetLives()
+    {
+        if(lives == 0)
+        {
+            lives_hearts[0].SetActive(false);
+            lives_hearts[1].SetActive(false);
+            lives_hearts[2].SetActive(false);
+        }
+        if(lives == 1)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(false);
+            lives_hearts[2].SetActive(false);
+        }
+        if(lives == 2)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(false);
+        }
+        if(lives == 3)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+        }
     }
     
 }

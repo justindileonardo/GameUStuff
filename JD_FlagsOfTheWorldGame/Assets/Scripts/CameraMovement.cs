@@ -41,13 +41,10 @@ public class CameraMovement : MonoBehaviour
             }
         }
 
-        if(SceneManager.GetActiveScene().name == "NorthAmerica")
-        {
-            if(transform.position.x < ResetCamera.x - screenMax || transform.position.x > ResetCamera.x + screenMax || transform.position.y < ResetCamera.y - screenMax || transform.position.y > ResetCamera.y + screenMax)
+        if(transform.position.x < ResetCamera.x - screenMax || transform.position.x > ResetCamera.x + screenMax || transform.position.y < ResetCamera.y - screenMax || transform.position.y > ResetCamera.y + screenMax)
             {
                 Camera.main.transform.position = ResetCamera;
             }
-        }
         
         
     }
