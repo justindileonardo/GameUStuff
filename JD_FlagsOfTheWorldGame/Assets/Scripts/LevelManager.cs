@@ -6,8 +6,9 @@ using UnityEngine.SceneManagement;
 public class LevelManager : MonoBehaviour
 {
     public static bool NA_complete, SA_complete, EU_complete, AS_complete, AF_complete, AU_complete;
+    public static int difficulty;
     public SpriteRenderer[] NA_Flags;
-    public Animator UI_Holder_Animator, UI_TitleHolder_Animator;
+    public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator;
     public bool UI_enabled;
     // Start is called before the first frame update
     void Start()
@@ -59,6 +60,22 @@ public class LevelManager : MonoBehaviour
         SceneManager.LoadScene(levelName);
     }
 
+    public void SetDifficulty(int levelDifficulty)
+    {
+        if(levelDifficulty == 0)
+        {
+            difficulty = 0;     //easy
+        }
+        else if(levelDifficulty == 1)
+        {
+            difficulty = 1;     //normal
+        }
+        else if(levelDifficulty == 2)
+        {
+            difficulty = 2;     //hard
+        }
+    }
+
     public void UI_Holder_Toggle()
     {
         if(UI_enabled == true)
@@ -66,12 +83,14 @@ public class LevelManager : MonoBehaviour
             UI_enabled = false;
             UI_Holder_Animator.SetBool("UI_Holder_Enabled", false);
             UI_TitleHolder_Animator.SetBool("UI_TitleHolder_Enabled", false);
+            UI_Holder2_Animator.SetBool("UI_Holder2_Enabled", false);
         }
         else if(UI_enabled == false)
         {
             UI_enabled = true;
             UI_Holder_Animator.SetBool("UI_Holder_Enabled", true);
             UI_TitleHolder_Animator.SetBool("UI_TitleHolder_Enabled", true);
+            UI_Holder2_Animator.SetBool("UI_Holder2_Enabled", true);
         }
     }
 

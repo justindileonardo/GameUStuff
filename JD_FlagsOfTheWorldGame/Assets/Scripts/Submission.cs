@@ -21,6 +21,19 @@ public class Submission : MonoBehaviour
     void Start()
     {
         selectionScript = GameObject.Find("SelectionScript").GetComponent<Selection>();
+        if(LevelManager.difficulty == 0)
+        {
+            lives = 10;
+        }
+        else if(LevelManager.difficulty == 1)
+        {
+            lives = 5;
+        }
+        else if(LevelManager.difficulty == 2)
+        {
+            lives = 1;
+        }
+        SetLives();
         //testing
         //correctSubmissions = 23;
     }
@@ -144,24 +157,143 @@ public class Submission : MonoBehaviour
             lives_hearts[0].SetActive(false);
             lives_hearts[1].SetActive(false);
             lives_hearts[2].SetActive(false);
+            lives_hearts[3].SetActive(false);
+            lives_hearts[4].SetActive(false);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
         }
         if(lives == 1)
         {
             lives_hearts[0].SetActive(true);
             lives_hearts[1].SetActive(false);
             lives_hearts[2].SetActive(false);
+            lives_hearts[3].SetActive(false);
+            lives_hearts[4].SetActive(false);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
         }
         if(lives == 2)
         {
             lives_hearts[0].SetActive(true);
             lives_hearts[1].SetActive(true);
             lives_hearts[2].SetActive(false);
+            lives_hearts[3].SetActive(false);
+            lives_hearts[4].SetActive(false);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
         }
         if(lives == 3)
         {
             lives_hearts[0].SetActive(true);
             lives_hearts[1].SetActive(true);
             lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(false);
+            lives_hearts[4].SetActive(false);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 4)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(false);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 5)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(false);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 6)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(true);
+            lives_hearts[6].SetActive(false);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 7)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(true);
+            lives_hearts[6].SetActive(true);
+            lives_hearts[7].SetActive(false);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 8)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(true);
+            lives_hearts[6].SetActive(true);
+            lives_hearts[7].SetActive(true);
+            lives_hearts[8].SetActive(false);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 9)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(true);
+            lives_hearts[6].SetActive(true);
+            lives_hearts[7].SetActive(true);
+            lives_hearts[8].SetActive(true);
+            lives_hearts[9].SetActive(false);
+        }
+        if (lives == 10)
+        {
+            lives_hearts[0].SetActive(true);
+            lives_hearts[1].SetActive(true);
+            lives_hearts[2].SetActive(true);
+            lives_hearts[3].SetActive(true);
+            lives_hearts[4].SetActive(true);
+            lives_hearts[5].SetActive(true);
+            lives_hearts[6].SetActive(true);
+            lives_hearts[7].SetActive(true);
+            lives_hearts[8].SetActive(true);
+            lives_hearts[9].SetActive(true);
         }
     }
     

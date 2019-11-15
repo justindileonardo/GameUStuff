@@ -10,6 +10,7 @@ public class Selection : MonoBehaviour
     public bool mouseIsHighEnough;
     Vector3 mousePosCameraRelative;
     Vector2 mousePos2DCameraRelative;
+    public AudioSource selectSound, deselectSound;
     // Start is called before the first frame update
     void Start()
     {
@@ -61,10 +62,12 @@ public class Selection : MonoBehaviour
                         if (currentGeography.transform.position != temporaryGeography.transform.position)
                         {
                             temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
+                            selectSound.Play();
                         }
                         //deselect selection if you click the same geography you already have selected
                         if (currentGeography.transform.position == temporaryGeography.transform.position)
                         {
+                            deselectSound.Play();
                             Deselect();
                         }
                     }
@@ -75,6 +78,7 @@ public class Selection : MonoBehaviour
                         currentGeography = hit.collider.gameObject;
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
                         animFlagsBox.SetBool("HasASelection", true);
+                        selectSound.Play();
                     }
                 }
             }
@@ -95,10 +99,12 @@ public class Selection : MonoBehaviour
                         if (currentGeography.transform.position != temporaryGeography.transform.position)
                         {
                             temporaryGeography.GetComponent<SpriteRenderer>().color = Color.white;
+                            selectSound.Play();
                         }
                         //deselect selection if you click the same geography you already have selected
                         if (currentGeography.transform.position == temporaryGeography.transform.position)
                         {
+                            deselectSound.Play();
                             Deselect();
                         }
                     }
@@ -109,6 +115,7 @@ public class Selection : MonoBehaviour
                         currentGeography = hit.collider.gameObject;
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
                         animFlagsBox.SetBool("HasASelection", true);
+                        selectSound.Play();
                     }
                 }
             }
