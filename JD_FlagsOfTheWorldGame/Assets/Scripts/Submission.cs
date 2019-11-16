@@ -50,9 +50,12 @@ public class Submission : MonoBehaviour
         
         //update wrong text
         text_wrongSubmissions.text = "Wrong: " + wrongSubmissions;
-        
-        
-        
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("MainMenu");
+        }
+
     }
     //when you click the button of a flag
     public void MakeSubmission(GameObject correctCountry)

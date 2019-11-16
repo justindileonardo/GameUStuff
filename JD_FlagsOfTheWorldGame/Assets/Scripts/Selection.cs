@@ -32,6 +32,8 @@ public class Selection : MonoBehaviour
             mouseIsHighEnough = false;
         }
         SelectGeography();
+
+        
     }
 
     public void SelectGeography()
