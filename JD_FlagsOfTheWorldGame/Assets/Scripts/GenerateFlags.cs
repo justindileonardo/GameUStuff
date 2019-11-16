@@ -70,12 +70,12 @@ public class GenerateFlags : MonoBehaviour
                 //if even, positive y
                 if (i % 2 == 0)
                 {
-                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i * 30), 17.5f, 0);
+                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i/2 * 30), 17.5f, 0);
                 }
                 //if odd, negative y
                 else
                 {
-                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i * 30 - 30), -17.5f, 0);
+                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i/2 * 30 - 30), -17.5f, 0);
                 }
 
             }
@@ -85,12 +85,12 @@ public class GenerateFlags : MonoBehaviour
                 //if even, positive y
                 if (i % 2 == 0)
                 {
-                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i * 30), 17.5f, 0);
+                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i/2 * 30), 17.5f, 0);
                 }
                 //if odd, negative y
                 else
                 {
-                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i * 30 - 30), -17.5f, 0);
+                    flagButtonsRandomized[i].GetComponent<RectTransform>().anchoredPosition = new Vector3(minX + (i/2 * 30 - 30), -17.5f, 0);
                 }
             }
 
