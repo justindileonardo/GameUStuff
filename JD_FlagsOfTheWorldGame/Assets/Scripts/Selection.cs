@@ -28,7 +28,7 @@ public class Selection : MonoBehaviour
         if(mousePosCameraRelative.y > 0.16f)
         {
             mouseIsHighEnough = true;
-            previewText.enabled = false;
+            //previewText.enabled = false;
         } 
         else
         {
@@ -63,6 +63,11 @@ public class Selection : MonoBehaviour
                         //then set the new clicked geography as the currentGeography and change color to yellow
                         currentGeography = hit.collider.gameObject;
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
+                        if(LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                        {
+                            previewText.text = currentGeography.GetComponent<GeographyPreviewCountryName>().countryName;
+                        }
+                       
                         //if the geographies you clicked are different (different positions), make the temporary geography back to white
                         if (currentGeography.transform.position != temporaryGeography.transform.position)
                         {
@@ -74,6 +79,11 @@ public class Selection : MonoBehaviour
                         {
                             deselectSound.Play();
                             Deselect();
+                            if (LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                            {
+                                previewText.text = "";
+                            }
+                            
                         }
                     }
                     //if first click (nothing selected)
@@ -84,6 +94,10 @@ public class Selection : MonoBehaviour
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
                         animFlagsBox.SetBool("HasASelection", true);
                         selectSound.Play();
+                        if (LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                        {
+                            previewText.text = currentGeography.GetComponent<GeographyPreviewCountryName>().countryName;
+                        }
                     }
                 }
             }
@@ -100,6 +114,10 @@ public class Selection : MonoBehaviour
                         //then set the new clicked geography as the currentGeography and change color to yellow
                         currentGeography = hit.collider.gameObject;
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
+                        if (LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                        {
+                            previewText.text = currentGeography.GetComponent<GeographyPreviewCountryName>().countryName;
+                        }
                         //if the geographies you clicked are different (different positions), make the temporary geography back to white
                         if (currentGeography.transform.position != temporaryGeography.transform.position)
                         {
@@ -111,6 +129,10 @@ public class Selection : MonoBehaviour
                         {
                             deselectSound.Play();
                             Deselect();
+                            if (LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                            {
+                                previewText.text = "";
+                            }
                         }
                     }
                     //if first click (nothing selected)
@@ -121,6 +143,10 @@ public class Selection : MonoBehaviour
                         currentGeography.GetComponent<SpriteRenderer>().color = Color.yellow;
                         animFlagsBox.SetBool("HasASelection", true);
                         selectSound.Play();
+                        if (LevelManager.geographyPreviews == true && LevelManager.difficulty != 2 && LevelManager.difficulty != 3)
+                        {
+                            previewText.text = currentGeography.GetComponent<GeographyPreviewCountryName>().countryName;
+                        }
                     }
                 }
             }

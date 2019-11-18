@@ -746,6 +746,7 @@ GameObject:
   - component: {fileID: 31002872}
   - component: {fileID: 31002873}
   - component: {fileID: 31002874}
+  - component: {fileID: 31002875}
   m_Layer: 0
   m_Name: _0104_Mexico_white
   m_TagString: Untagged
@@ -1231,6 +1232,20 @@ PolygonCollider2D:
       - {x: 1.8883333, y: -1.97}
       - {x: 1.8916668, y: -1.8933334}
       - {x: 1.8950001, y: -1.7966667}
+--- !u!114 &31002875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31002871}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Mexico
+  previewText: {fileID: 0}
 --- !u!1 &106595761
 GameObject:
   m_ObjectHideFlags: 0
@@ -1273,6 +1288,7 @@ MonoBehaviour:
   mouseIsHighEnough: 0
   selectSound: {fileID: 106595769}
   deselectSound: {fileID: 106595768}
+  previewText: {fileID: 0}
 --- !u!4 &106595763
 Transform:
   m_ObjectHideFlags: 0
@@ -1938,6 +1954,7 @@ GameObject:
   - component: {fileID: 121257998}
   - component: {fileID: 121257999}
   - component: {fileID: 121258000}
+  - component: {fileID: 121258001}
   m_Layer: 0
   m_Name: _0110_ElSalvador_white
   m_TagString: Untagged
@@ -2054,6 +2071,20 @@ PolygonCollider2D:
       - {x: 0.2616667, y: -0.11833334}
       - {x: 0.2616667, y: 0.011666667}
       - {x: 0.22833334, y: 0.038333334}
+--- !u!114 &121258001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 121257997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: El Salvador
+  previewText: {fileID: 0}
 --- !u!1 &158863443
 GameObject:
   m_ObjectHideFlags: 0
@@ -2667,80 +2698,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 204617870}
   m_CullTransparentMesh: 0
---- !u!1 &269376507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 269376508}
-  - component: {fileID: 269376510}
-  - component: {fileID: 269376509}
-  m_Layer: 5
-  m_Name: Controls_RightClick
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &269376508
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269376507}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1555236660}
-  m_RootOrder: 8
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 55}
-  m_SizeDelta: {x: 25, y: 25}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &269376509
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269376507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
---- !u!222 &269376510
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 269376507}
-  m_CullTransparentMesh: 0
 --- !u!1 &302396968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2752,6 +2709,7 @@ GameObject:
   - component: {fileID: 302396969}
   - component: {fileID: 302396970}
   - component: {fileID: 302396971}
+  - component: {fileID: 302396972}
   m_Layer: 0
   m_Name: _0140_StLucia_white
   m_TagString: Untagged
@@ -2852,6 +2810,20 @@ PolygonCollider2D:
       - {x: -0.025, y: -0.086666666}
       - {x: 0.045, y: -0.086666666}
       - {x: 0.045, y: 0.086666666}
+--- !u!114 &302396972
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302396968}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: St Lucia
+  previewText: {fileID: 0}
 --- !u!1 &337168540
 GameObject:
   m_ObjectHideFlags: 0
@@ -2922,12 +2894,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1555236660}
-  m_RootOrder: 9
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -50, y: 25}
-  m_SizeDelta: {x: 25, y: 25}
+  m_AnchoredPosition: {x: -50, y: 55}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &339588818
 MonoBehaviour:
@@ -2949,7 +2921,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: e183fdc10cb3b444f8bd3a46c4106cb9, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2977,6 +2949,7 @@ GameObject:
   - component: {fileID: 366022683}
   - component: {fileID: 366022684}
   - component: {fileID: 366022685}
+  - component: {fileID: 366022686}
   m_Layer: 0
   m_Name: _0098_Greenland_white
   m_TagString: Untagged
@@ -3696,6 +3669,20 @@ PolygonCollider2D:
       - {x: 0.012600098, y: -8.484066}
       - {x: 0.17220134, y: -8.114463}
       - {x: 0.23100178, y: -7.904461}
+--- !u!114 &366022686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 366022682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Greenland
+  previewText: {fileID: 0}
 --- !u!1 &419201148
 GameObject:
   m_ObjectHideFlags: 0
@@ -3785,7 +3772,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -150, y: 200}
+  m_AnchoredPosition: {x: -195, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &423957885
@@ -3801,14 +3788,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3836,6 +3823,7 @@ GameObject:
   - component: {fileID: 433515597}
   - component: {fileID: 433515598}
   - component: {fileID: 433515599}
+  - component: {fileID: 433515600}
   m_Layer: 0
   m_Name: UnitedStates_white
   m_TagString: Untagged
@@ -4606,6 +4594,20 @@ PolygonCollider2D:
     - - {x: -8.067625, y: 5.751536}
       - {x: -8.026359, y: 5.751536}
       - {x: -8.046991, y: 5.741219}
+--- !u!114 &433515600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 433515596}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: United States
+  previewText: {fileID: 0}
 --- !u!1 &434695237
 GameObject:
   m_ObjectHideFlags: 0
@@ -4617,6 +4619,7 @@ GameObject:
   - component: {fileID: 434695238}
   - component: {fileID: 434695239}
   - component: {fileID: 434695240}
+  - component: {fileID: 434695241}
   m_Layer: 0
   m_Name: _0106_Bahamas_white
   m_TagString: Untagged
@@ -4889,6 +4892,20 @@ PolygonCollider2D:
       - {x: -0.5566667, y: 0.54833335}
       - {x: -0.51666665, y: 0.535}
       - {x: -0.49, y: 0.555}
+--- !u!114 &434695241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434695237}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Bahamas
+  previewText: {fileID: 0}
 --- !u!1 &469173666
 GameObject:
   m_ObjectHideFlags: 0
@@ -5087,12 +5104,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1555236660}
-  m_RootOrder: 7
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 85}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493642809
 MonoBehaviour:
@@ -5114,7 +5131,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 64dabfc01b15e1e4cae0ec2c777c0b91, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5165,7 +5182,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 200}
+  m_AnchoredPosition: {x: -275, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &518455353
@@ -5181,14 +5198,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5241,6 +5258,9 @@ MonoBehaviour:
   UI_Controls_Animator: {fileID: 1555236661}
   UI_enabled: 0
   UI_Controls_enabled: 0
+  easy: {fileID: 0}
+  normal: {fileID: 0}
+  hard: {fileID: 0}
 --- !u!4 &521853362
 Transform:
   m_ObjectHideFlags: 0
@@ -5434,6 +5454,7 @@ GameObject:
   - component: {fileID: 558037955}
   - component: {fileID: 558037956}
   - component: {fileID: 558037957}
+  - component: {fileID: 558037958}
   m_Layer: 0
   m_Name: _0138_StVincentAndTheGrenadines_white
   m_TagString: Untagged
@@ -5542,6 +5563,20 @@ PolygonCollider2D:
       - {x: 0.033333335, y: -0.006666667}
       - {x: 0.06666667, y: 0}
       - {x: 0.06666667, y: 0.120000005}
+--- !u!114 &558037958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558037954}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: St Vincent and The Grenadines
+  previewText: {fileID: 0}
 --- !u!1 &602238608
 GameObject:
   m_ObjectHideFlags: 0
@@ -5734,7 +5769,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -350, y: 200}
+  m_AnchoredPosition: {x: -355, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &686982322
@@ -5750,14 +5785,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5953,6 +5988,7 @@ GameObject:
   - component: {fileID: 700124051}
   - component: {fileID: 700124052}
   - component: {fileID: 700124053}
+  - component: {fileID: 700124054}
   m_Layer: 0
   m_Name: _0134_Barbados_white
   m_TagString: Untagged
@@ -6053,6 +6089,20 @@ PolygonCollider2D:
       - {x: -0.030000001, y: -0.06666667}
       - {x: 0.04, y: -0.06666667}
       - {x: 0.04, y: 0.05}
+--- !u!114 &700124054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 700124050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Barbados
+  previewText: {fileID: 0}
 --- !u!1 &709904233
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,12 +6133,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1555236660}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 115}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &709904235
 MonoBehaviour:
@@ -6110,7 +6160,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: a0b97513e4869ea4e9ae707734f504f0, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -6296,6 +6346,7 @@ GameObject:
   - component: {fileID: 768515976}
   - component: {fileID: 768515977}
   - component: {fileID: 768515978}
+  - component: {fileID: 768515979}
   m_Layer: 0
   m_Name: _0119_SaintKittsAndNevis_white
   m_TagString: Untagged
@@ -6399,6 +6450,20 @@ PolygonCollider2D:
       - {x: 0.08166667, y: -0.11}
       - {x: 0.08166667, y: -0.03666667}
       - {x: 0.025, y: 0.023333333}
+--- !u!114 &768515979
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 768515975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Saint Kitts and Nevis
+  previewText: {fileID: 0}
 --- !u!1 &775117578
 GameObject:
   m_ObjectHideFlags: 0
@@ -7013,6 +7078,7 @@ GameObject:
   - component: {fileID: 901668829}
   - component: {fileID: 901668830}
   - component: {fileID: 901668831}
+  - component: {fileID: 901668832}
   m_Layer: 0
   m_Name: _0108_Cuba_white
   m_TagString: Untagged
@@ -7205,6 +7271,20 @@ PolygonCollider2D:
       - {x: -0.59333336, y: -0.038333334}
       - {x: -0.57, y: -0.021666666}
       - {x: -0.57, y: 0.035}
+--- !u!114 &901668832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 901668828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Cuba
+  previewText: {fileID: 0}
 --- !u!1 &924879341
 GameObject:
   m_ObjectHideFlags: 0
@@ -7485,6 +7565,7 @@ GameObject:
   - component: {fileID: 1037951723}
   - component: {fileID: 1037951724}
   - component: {fileID: 1037951725}
+  - component: {fileID: 1037951726}
   m_Layer: 0
   m_Name: _0100_Guatemala_white
   m_TagString: Untagged
@@ -7610,6 +7691,20 @@ PolygonCollider2D:
       - {x: 0.065000005, y: -0.395}
       - {x: 0.108333334, y: -0.36833334}
       - {x: 0.175, y: -0.28166667}
+--- !u!114 &1037951726
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1037951722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Guatemala
+  previewText: {fileID: 0}
 --- !u!1 &1054190676
 GameObject:
   m_ObjectHideFlags: 0
@@ -8094,85 +8189,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!1 &1169667543
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1169667544}
-  - component: {fileID: 1169667546}
-  - component: {fileID: 1169667545}
-  m_Layer: 5
-  m_Name: Text_Controls4
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!224 &1169667544
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169667543}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1555236660}
-  m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.5, y: -15}
-  m_SizeDelta: {x: 160, y: 150}
-  m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1169667545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169667543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
-  m_RaycastTarget: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 14
-    m_FontStyle: 0
-    m_BestFit: 0
-    m_MinSize: 10
-    m_MaxSize: 40
-    m_Alignment: 0
-    m_AlignByGeometry: 0
-    m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
-    m_LineSpacing: 1
-  m_Text: Reset Camera
---- !u!222 &1169667546
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1169667543}
-  m_CullTransparentMesh: 0
 --- !u!1 &1173400868
 GameObject:
   m_ObjectHideFlags: 0
@@ -8184,6 +8200,7 @@ GameObject:
   - component: {fileID: 1173400869}
   - component: {fileID: 1173400870}
   - component: {fileID: 1173400871}
+  - component: {fileID: 1173400872}
   m_Layer: 0
   m_Name: _0122_Jamaica_white
   m_TagString: Untagged
@@ -8294,6 +8311,20 @@ PolygonCollider2D:
       - {x: 0.011666667, y: -0.07}
       - {x: 0.041666668, y: -0.10333334}
       - {x: 0.065000005, y: -0.1}
+--- !u!114 &1173400872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1173400868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Jamaica
+  previewText: {fileID: 0}
 --- !u!1 &1187329361
 GameObject:
   m_ObjectHideFlags: 0
@@ -8324,12 +8355,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1555236660}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: -50, y: 145}
-  m_SizeDelta: {x: 25, y: 25}
+  m_SizeDelta: {x: 40, y: 40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1187329363
 MonoBehaviour:
@@ -8351,7 +8382,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 948f6f6026cff5f4cb54e080ff14a31a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8655,14 +8686,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -8690,6 +8721,7 @@ GameObject:
   - component: {fileID: 1330661408}
   - component: {fileID: 1330661409}
   - component: {fileID: 1330661410}
+  - component: {fileID: 1330661411}
   m_Layer: 0
   m_Name: _0132_AntiguaAndBarbara_white
   m_TagString: Untagged
@@ -8798,6 +8830,20 @@ PolygonCollider2D:
       - {x: 0.046666667, y: 0.048333336}
       - {x: 0.053333335, y: 0.058333334}
       - {x: 0.053333335, y: 0.12166667}
+--- !u!114 &1330661411
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1330661407}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Antigua and Barbara
+  previewText: {fileID: 0}
 --- !u!1 &1338512402
 GameObject:
   m_ObjectHideFlags: 0
@@ -8996,11 +9042,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1555236660}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 47.5, y: -45}
+  m_AnchoredPosition: {x: 47.5, y: -15}
   m_SizeDelta: {x: 160, y: 150}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1343621339
@@ -9111,6 +9157,7 @@ GameObject:
   - component: {fileID: 1400092912}
   - component: {fileID: 1400092913}
   - component: {fileID: 1400092914}
+  - component: {fileID: 1400092915}
   m_Layer: 0
   m_Name: _0096_Canada_white
   m_TagString: Untagged
@@ -11257,6 +11304,20 @@ PolygonCollider2D:
       - {x: 4.5479465, y: 10.346445}
       - {x: 4.580012, y: 10.303691}
       - {x: 4.5907006, y: 10.31438}
+--- !u!114 &1400092915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1400092911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Canada
+  previewText: {fileID: 0}
 --- !u!1 &1417483361
 GameObject:
   m_ObjectHideFlags: 0
@@ -11647,6 +11708,7 @@ GameObject:
   - component: {fileID: 1425452547}
   - component: {fileID: 1425452548}
   - component: {fileID: 1425452549}
+  - component: {fileID: 1425452550}
   m_Layer: 0
   m_Name: _0116_CostaRica_white
   m_TagString: Untagged
@@ -11775,6 +11837,20 @@ PolygonCollider2D:
       - {x: 0.2616667, y: -0.28333333}
       - {x: 0.28833333, y: -0.18}
       - {x: 0.28833333, y: -0.083333336}
+--- !u!114 &1425452550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1425452546}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Costa Rica
+  previewText: {fileID: 0}
 --- !u!1 &1431393469
 GameObject:
   m_ObjectHideFlags: 0
@@ -11977,7 +12053,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -200, y: 200}
+  m_AnchoredPosition: {x: -235, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1442136792
@@ -11993,14 +12069,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12051,7 +12127,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -225, y: 200}
+  m_AnchoredPosition: {x: -255, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1451824991
@@ -12067,14 +12143,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -12102,6 +12178,7 @@ GameObject:
   - component: {fileID: 1458011220}
   - component: {fileID: 1458011221}
   - component: {fileID: 1458011222}
+  - component: {fileID: 1458011223}
   m_Layer: 0
   m_Name: _0102_Belize_white
   m_TagString: Untagged
@@ -12215,6 +12292,20 @@ PolygonCollider2D:
       - {x: 0.0033333334, y: -0.23166667}
       - {x: 0.053333335, y: -0.20166667}
       - {x: 0.09, y: -0.165}
+--- !u!114 &1458011223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1458011219}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Belize
+  previewText: {fileID: 0}
 --- !u!1 &1509095736
 GameObject:
   m_ObjectHideFlags: 0
@@ -12384,6 +12475,7 @@ GameObject:
   - component: {fileID: 1527466446}
   - component: {fileID: 1527466447}
   - component: {fileID: 1527466448}
+  - component: {fileID: 1527466449}
   m_Layer: 0
   m_Name: _0120_PuertoRico_white
   m_TagString: Untagged
@@ -12497,6 +12589,20 @@ PolygonCollider2D:
       - {x: -0.013333334, y: -0.07666667}
       - {x: 0.053333335, y: -0.07333334}
       - {x: 0.1, y: -0.04}
+--- !u!114 &1527466449
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1527466445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Puerto Rico
+  previewText: {fileID: 0}
 --- !u!1 &1539197054
 GameObject:
   m_ObjectHideFlags: 0
@@ -12508,6 +12614,7 @@ GameObject:
   - component: {fileID: 1539197055}
   - component: {fileID: 1539197056}
   - component: {fileID: 1539197057}
+  - component: {fileID: 1539197058}
   m_Layer: 0
   m_Name: _0112_Honduras_white
   m_TagString: Untagged
@@ -12649,6 +12756,20 @@ PolygonCollider2D:
       - {x: -0.11333334, y: -0.29333335}
       - {x: -0.09, y: -0.26666668}
       - {x: -0.08, y: -0.19666667}
+--- !u!114 &1539197058
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1539197054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Honduras
+  previewText: {fileID: 0}
 --- !u!1 &1555236659
 GameObject:
   m_ObjectHideFlags: 0
@@ -12682,12 +12803,10 @@ RectTransform:
   - {fileID: 1054190677}
   - {fileID: 1081053810}
   - {fileID: 2074908280}
-  - {fileID: 1169667544}
   - {fileID: 1343621338}
   - {fileID: 1187329362}
   - {fileID: 709904234}
   - {fileID: 493642808}
-  - {fileID: 269376508}
   - {fileID: 339588817}
   m_Father: {fileID: 775117582}
   m_RootOrder: 0
@@ -13003,6 +13122,7 @@ GameObject:
   - component: {fileID: 1565042487}
   - component: {fileID: 1565042488}
   - component: {fileID: 1565042489}
+  - component: {fileID: 1565042490}
   m_Layer: 0
   m_Name: _0130_Dominica_white
   m_TagString: Untagged
@@ -13104,6 +13224,20 @@ PolygonCollider2D:
       - {x: 0.045, y: -0.068333335}
       - {x: 0.045, y: 0.041666668}
       - {x: 0.015000001, y: 0.068333335}
+--- !u!114 &1565042490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1565042486}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Dominica
+  previewText: {fileID: 0}
 --- !u!1 &1565692408
 GameObject:
   m_ObjectHideFlags: 0
@@ -13790,7 +13924,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -300, y: 200}
+  m_AnchoredPosition: {x: -315, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1682258495
@@ -13806,14 +13940,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -14273,6 +14407,7 @@ GameObject:
   - component: {fileID: 1735939738}
   - component: {fileID: 1735939739}
   - component: {fileID: 1735939740}
+  - component: {fileID: 1735939741}
   m_Layer: 0
   m_Name: _0126_DominicanRepublic_white
   m_TagString: Untagged
@@ -14405,6 +14540,20 @@ PolygonCollider2D:
       - {x: -0.19500001, y: -0.21833333}
       - {x: -0.17833334, y: -0.16833334}
       - {x: -0.108333334, y: -0.115}
+--- !u!114 &1735939741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1735939737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Dominican Republic
+  previewText: {fileID: 0}
 --- !u!1 &1742649659
 GameObject:
   m_ObjectHideFlags: 0
@@ -14653,6 +14802,7 @@ GameObject:
   - component: {fileID: 1795636310}
   - component: {fileID: 1795636311}
   - component: {fileID: 1795636312}
+  - component: {fileID: 1795636313}
   m_Layer: 0
   m_Name: _0128_Panama_white
   m_TagString: Untagged
@@ -14816,6 +14966,20 @@ PolygonCollider2D:
       - {x: 0.060000002, y: 0.12166667}
       - {x: 0.06666667, y: 0.12166667}
       - {x: 0.07333334, y: 0.125}
+--- !u!114 &1795636313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795636309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Panama
+  previewText: {fileID: 0}
 --- !u!1 &1801452880
 GameObject:
   m_ObjectHideFlags: 0
@@ -16332,7 +16496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -175, y: 200}
+  m_AnchoredPosition: {x: -215, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1930912090
@@ -16348,14 +16512,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -16620,6 +16784,7 @@ GameObject:
   - component: {fileID: 2003400012}
   - component: {fileID: 2003400013}
   - component: {fileID: 2003400014}
+  - component: {fileID: 2003400015}
   m_Layer: 0
   m_Name: _0124_Haiti_white
   m_TagString: Untagged
@@ -16764,6 +16929,20 @@ PolygonCollider2D:
       - {x: -0.055, y: -0.25333333}
       - {x: -0.05166667, y: -0.23}
       - {x: -0.075, y: -0.20666668}
+--- !u!114 &2003400015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003400011}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Haiti
+  previewText: {fileID: 0}
 --- !u!1 &2009296185
 GameObject:
   m_ObjectHideFlags: 0
@@ -17139,7 +17318,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -275, y: 200}
+  m_AnchoredPosition: {x: -295, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2066652360
@@ -17155,14 +17334,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17348,6 +17527,7 @@ GameObject:
   - component: {fileID: 2093993210}
   - component: {fileID: 2093993211}
   - component: {fileID: 2093993212}
+  - component: {fileID: 2093993213}
   m_Layer: 0
   m_Name: _0136_Grenada_white
   m_TagString: Untagged
@@ -17451,6 +17631,20 @@ PolygonCollider2D:
       - {x: 0.068333335, y: -0.025}
       - {x: 0.068333335, y: 0.075}
       - {x: 0.065000005, y: 0.07833333}
+--- !u!114 &2093993213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2093993209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Grenada
+  previewText: {fileID: 0}
 --- !u!1 &2106031982
 GameObject:
   m_ObjectHideFlags: 0
@@ -17462,6 +17656,7 @@ GameObject:
   - component: {fileID: 2106031983}
   - component: {fileID: 2106031984}
   - component: {fileID: 2106031985}
+  - component: {fileID: 2106031986}
   m_Layer: 0
   m_Name: _0142_TrinidadAndTobago_white
   m_TagString: Untagged
@@ -17576,6 +17771,20 @@ PolygonCollider2D:
       - {x: 0.11, y: 0.06666667}
       - {x: 0.16666667, y: 0.1}
       - {x: 0.16666667, y: 0.14}
+--- !u!114 &2106031986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2106031982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Trinidad and Tobago
+  previewText: {fileID: 0}
 --- !u!1 &2122786232
 GameObject:
   m_ObjectHideFlags: 0
@@ -17610,7 +17819,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -325, y: 200}
+  m_AnchoredPosition: {x: -335, y: 200}
   m_SizeDelta: {x: 20, y: 20}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2122786234
@@ -17626,14 +17835,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: dfb6080f801178042a609e1c20a3a042, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -17661,6 +17870,7 @@ GameObject:
   - component: {fileID: 2128645732}
   - component: {fileID: 2128645733}
   - component: {fileID: 2128645734}
+  - component: {fileID: 2128645735}
   m_Layer: 0
   m_Name: _0114_Nicaragua_white
   m_TagString: Untagged
@@ -17799,3 +18009,17 @@ PolygonCollider2D:
       - {x: 0.36666667, y: -0.4116667}
       - {x: 0.36, y: -0.34833333}
       - {x: 0.34333333, y: -0.30166668}
+--- !u!114 &2128645735
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2128645731}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf69a08a3c6e4ab4ca7ab50e3bd024f8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Nicaragua
+  previewText: {fileID: 0}

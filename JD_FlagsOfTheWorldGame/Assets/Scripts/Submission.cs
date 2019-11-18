@@ -32,6 +32,10 @@ public class Submission : MonoBehaviour
         }
         else if(LevelManager.difficulty == 2)
         {
+            lives = 5;
+        }
+        else if (LevelManager.difficulty == 3)
+        {
             lives = 1;
         }
         SetLives();

@@ -11,18 +11,27 @@ public class HighlightPreviewCountryName : MonoBehaviour, IPointerEnterHandler
     void Start()
     {
         previewText = GameObject.Find("Text_Country").GetComponent<Text>();
-        previewText.enabled = false;
+        if(LevelManager.flagPreviews == true)
+        {
+            previewText.enabled = false;
+        }
+        
     }
     public void OnPointerEnter(PointerEventData eventData)
     {
-        if(LevelManager.difficulty == 0 || LevelManager.difficulty == 1)
+        if(LevelManager.flagPreviews == true)
         {
-            previewText.enabled = true;
-            previewText.text = countryName;
-        } else
-        {
-           
+            if (LevelManager.difficulty == 0 || LevelManager.difficulty == 1)
+            {
+                previewText.enabled = true;
+                previewText.text = countryName;
+            }
+            else
+            {
+
+            }
         }
+        
         
     }
 

@@ -52,7 +52,7 @@ public class CameraMovement : MonoBehaviour
     void LateUpdate()
     {
         //Camera Movement
-        if (Input.GetMouseButton(2))
+        if (Input.GetMouseButton(1))
         {
             Diference = (Camera.main.ScreenToWorldPoint(Input.mousePosition)) - Camera.main.transform.position;
             if (Drag == false)
@@ -70,10 +70,10 @@ public class CameraMovement : MonoBehaviour
             Camera.main.transform.position = Origin - Diference;
         }
         //RESET CAMERA TO STARTING POSITION WITH RIGHT CLICK
-        if (Input.GetMouseButton(1))
-        {
-            Camera.main.transform.position = ResetCamera;
-        }
+        //if (Input.GetMouseButton(1))
+        //{
+            //Camera.main.transform.position = ResetCamera;
+        //}
     }
 
 }
