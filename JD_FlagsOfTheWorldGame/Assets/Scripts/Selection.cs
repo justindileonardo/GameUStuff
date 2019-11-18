@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 public class Selection : MonoBehaviour
 {
 
@@ -11,9 +11,11 @@ public class Selection : MonoBehaviour
     Vector3 mousePosCameraRelative;
     Vector2 mousePos2DCameraRelative;
     public AudioSource selectSound, deselectSound;
+    public Text previewText;
     // Start is called before the first frame update
     void Start()
     {
+        previewText = GameObject.Find("Text_Country").GetComponent<Text>();
         
     }
 
@@ -26,6 +28,7 @@ public class Selection : MonoBehaviour
         if(mousePosCameraRelative.y > 0.16f)
         {
             mouseIsHighEnough = true;
+            previewText.enabled = false;
         } 
         else
         {
@@ -146,5 +149,6 @@ public class Selection : MonoBehaviour
         temporaryGeography = null;
         animFlagsBox.SetBool("HasASelection", false);
     }
+
 
 }

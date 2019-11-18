@@ -211,6 +211,7 @@ GameObject:
   - component: {fileID: 6814678}
   - component: {fileID: 6814677}
   - component: {fileID: 6814676}
+  - component: {fileID: 6814679}
   m_Layer: 5
   m_Name: Flag_6
   m_TagString: Untagged
@@ -230,7 +231,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -352,6 +353,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6814674}
   m_CullTransparentMesh: 0
+--- !u!114 &6814679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6814674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Cuba
+  previewText: {fileID: 0}
 --- !u!1 &12231778
 GameObject:
   m_ObjectHideFlags: 0
@@ -364,6 +379,7 @@ GameObject:
   - component: {fileID: 12231782}
   - component: {fileID: 12231781}
   - component: {fileID: 12231780}
+  - component: {fileID: 12231783}
   m_Layer: 5
   m_Name: Flag_10
   m_TagString: Untagged
@@ -383,7 +399,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -505,6 +521,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 12231778}
   m_CullTransparentMesh: 0
+--- !u!114 &12231783
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 12231778}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Antigua and Barbara
+  previewText: {fileID: 0}
 --- !u!1 &15766314
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +645,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1513101556}
+  - {fileID: 1766583242}
   - {fileID: 690206714}
   - {fileID: 1563864120}
   - {fileID: 1417483362}
@@ -2180,6 +2211,7 @@ GameObject:
   - component: {fileID: 174196318}
   - component: {fileID: 174196317}
   - component: {fileID: 174196316}
+  - component: {fileID: 174196319}
   m_Layer: 5
   m_Name: Flag_18
   m_TagString: Untagged
@@ -2199,7 +2231,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 18
+  m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2321,6 +2353,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 174196314}
   m_CullTransparentMesh: 0
+--- !u!114 &174196319
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174196314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Barbados
+  previewText: {fileID: 0}
 --- !u!1 &196876460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2333,6 +2379,7 @@ GameObject:
   - component: {fileID: 196876464}
   - component: {fileID: 196876463}
   - component: {fileID: 196876462}
+  - component: {fileID: 196876465}
   m_Layer: 5
   m_Name: Flag_21
   m_TagString: Untagged
@@ -2352,7 +2399,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 21
+  m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2474,6 +2521,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 196876460}
   m_CullTransparentMesh: 0
+--- !u!114 &196876465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 196876460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Haiti
+  previewText: {fileID: 0}
 --- !u!1 &204617870
 GameObject:
   m_ObjectHideFlags: 0
@@ -4840,6 +4901,7 @@ GameObject:
   - component: {fileID: 469173670}
   - component: {fileID: 469173669}
   - component: {fileID: 469173668}
+  - component: {fileID: 469173671}
   m_Layer: 5
   m_Name: Flag_24
   m_TagString: Untagged
@@ -4859,7 +4921,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 24
+  m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4981,6 +5043,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 469173666}
   m_CullTransparentMesh: 0
+--- !u!114 &469173671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 469173666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Mexico
+  previewText: {fileID: 0}
 --- !u!1 &493642807
 GameObject:
   m_ObjectHideFlags: 0
@@ -5191,6 +5267,7 @@ GameObject:
   - component: {fileID: 548351336}
   - component: {fileID: 548351335}
   - component: {fileID: 548351334}
+  - component: {fileID: 548351337}
   m_Layer: 5
   m_Name: Flag_12
   m_TagString: Untagged
@@ -5210,7 +5287,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5332,6 +5409,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 548351332}
   m_CullTransparentMesh: 0
+--- !u!114 &548351337
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 548351332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Bahamas
+  previewText: {fileID: 0}
 --- !u!1 &558037954
 GameObject:
   m_ObjectHideFlags: 0
@@ -5695,6 +5786,7 @@ GameObject:
   - component: {fileID: 690206717}
   - component: {fileID: 690206716}
   - component: {fileID: 690206715}
+  - component: {fileID: 690206718}
   m_Layer: 5
   m_Name: Flag_1
   m_TagString: Untagged
@@ -5714,7 +5806,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5836,6 +5928,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 690206713}
   m_CullTransparentMesh: 0
+--- !u!114 &690206718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 690206713}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Saint Vincent and The Grenadines
+  previewText: {fileID: 0}
 --- !u!1 &700124050
 GameObject:
   m_ObjectHideFlags: 0
@@ -6572,6 +6678,7 @@ GameObject:
   - component: {fileID: 888226281}
   - component: {fileID: 888226280}
   - component: {fileID: 888226279}
+  - component: {fileID: 888226282}
   m_Layer: 5
   m_Name: Flag_7
   m_TagString: Untagged
@@ -6591,7 +6698,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6713,6 +6820,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 888226277}
   m_CullTransparentMesh: 0
+--- !u!114 &888226282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 888226277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Saint Lucia
+  previewText: {fileID: 0}
 --- !u!1 &896060525
 GameObject:
   m_ObjectHideFlags: 0
@@ -6725,6 +6846,7 @@ GameObject:
   - component: {fileID: 896060529}
   - component: {fileID: 896060528}
   - component: {fileID: 896060527}
+  - component: {fileID: 896060530}
   m_Layer: 5
   m_Name: Flag_13
   m_TagString: Untagged
@@ -6744,7 +6866,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6866,6 +6988,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 896060525}
   m_CullTransparentMesh: 0
+--- !u!114 &896060530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 896060525}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: United States
+  previewText: {fileID: 0}
 --- !u!1 &901668828
 GameObject:
   m_ObjectHideFlags: 0
@@ -7182,6 +7318,7 @@ GameObject:
   - component: {fileID: 976811541}
   - component: {fileID: 976811540}
   - component: {fileID: 976811539}
+  - component: {fileID: 976811542}
   m_Layer: 5
   m_Name: Flag_19
   m_TagString: Untagged
@@ -7201,7 +7338,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7323,6 +7460,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976811537}
   m_CullTransparentMesh: 0
+--- !u!114 &976811542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976811537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Panama
+  previewText: {fileID: 0}
 --- !u!1 &1037951722
 GameObject:
   m_ObjectHideFlags: 0
@@ -7629,6 +7780,7 @@ GameObject:
   - component: {fileID: 1070082712}
   - component: {fileID: 1070082711}
   - component: {fileID: 1070082710}
+  - component: {fileID: 1070082713}
   m_Layer: 5
   m_Name: Flag_15
   m_TagString: Untagged
@@ -7648,7 +7800,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7770,6 +7922,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1070082708}
   m_CullTransparentMesh: 0
+--- !u!114 &1070082713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1070082708}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Jamaica
+  previewText: {fileID: 0}
 --- !u!1 &1081053809
 GameObject:
   m_ObjectHideFlags: 0
@@ -8644,6 +8810,7 @@ GameObject:
   - component: {fileID: 1338512406}
   - component: {fileID: 1338512405}
   - component: {fileID: 1338512404}
+  - component: {fileID: 1338512407}
   m_Layer: 5
   m_Name: Flag_22
   m_TagString: Untagged
@@ -8663,7 +8830,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 22
+  m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8785,6 +8952,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1338512402}
   m_CullTransparentMesh: 0
+--- !u!114 &1338512407
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1338512402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Puerto Rico
+  previewText: {fileID: 0}
 --- !u!1 &1343621337
 GameObject:
   m_ObjectHideFlags: 0
@@ -11088,6 +11269,7 @@ GameObject:
   - component: {fileID: 1417483365}
   - component: {fileID: 1417483364}
   - component: {fileID: 1417483363}
+  - component: {fileID: 1417483366}
   m_Layer: 5
   m_Name: Flag_3
   m_TagString: Untagged
@@ -11107,7 +11289,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11229,6 +11411,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1417483361}
   m_CullTransparentMesh: 0
+--- !u!114 &1417483366
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1417483361}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Grenada
+  previewText: {fileID: 0}
 --- !u!1 &1420316789
 GameObject:
   m_ObjectHideFlags: 0
@@ -11591,6 +11787,7 @@ GameObject:
   - component: {fileID: 1431393473}
   - component: {fileID: 1431393472}
   - component: {fileID: 1431393471}
+  - component: {fileID: 1431393474}
   m_Layer: 5
   m_Name: Flag_8
   m_TagString: Untagged
@@ -11610,7 +11807,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -11732,6 +11929,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1431393469}
   m_CullTransparentMesh: 0
+--- !u!114 &1431393474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431393469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Dominican Republic
+  previewText: {fileID: 0}
 --- !u!1 &1442136790
 GameObject:
   m_ObjectHideFlags: 0
@@ -12625,6 +12836,7 @@ GameObject:
   - component: {fileID: 1563864123}
   - component: {fileID: 1563864122}
   - component: {fileID: 1563864121}
+  - component: {fileID: 1563864124}
   m_Layer: 5
   m_Name: Flag_2
   m_TagString: Untagged
@@ -12644,7 +12856,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -12766,6 +12978,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1563864119}
   m_CullTransparentMesh: 0
+--- !u!114 &1563864124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1563864119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Dominica
+  previewText: {fileID: 0}
 --- !u!1 &1565042486
 GameObject:
   m_ObjectHideFlags: 0
@@ -13048,6 +13274,7 @@ GameObject:
   - component: {fileID: 1602999884}
   - component: {fileID: 1602999883}
   - component: {fileID: 1602999882}
+  - component: {fileID: 1602999885}
   m_Layer: 5
   m_Name: Flag_25
   m_TagString: Untagged
@@ -13067,7 +13294,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 25
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13189,6 +13416,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1602999880}
   m_CullTransparentMesh: 0
+--- !u!114 &1602999885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1602999880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Costa Rica
+  previewText: {fileID: 0}
 --- !u!1 &1604238496
 GameObject:
   m_ObjectHideFlags: 0
@@ -13280,6 +13521,7 @@ GameObject:
   - component: {fileID: 1651080472}
   - component: {fileID: 1651080471}
   - component: {fileID: 1651080470}
+  - component: {fileID: 1651080473}
   m_Layer: 5
   m_Name: Flag_9
   m_TagString: Untagged
@@ -13299,7 +13541,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13421,6 +13663,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1651080468}
   m_CullTransparentMesh: 0
+--- !u!114 &1651080473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1651080468}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Trinidad and Tobago
+  previewText: {fileID: 0}
 --- !u!1 &1672072937
 GameObject:
   m_ObjectHideFlags: 0
@@ -13718,6 +13974,7 @@ GameObject:
   - component: {fileID: 1723442847}
   - component: {fileID: 1723442846}
   - component: {fileID: 1723442845}
+  - component: {fileID: 1723442848}
   m_Layer: 5
   m_Name: Flag_20
   m_TagString: Untagged
@@ -13737,7 +13994,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -13859,6 +14116,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1723442843}
   m_CullTransparentMesh: 0
+--- !u!114 &1723442848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723442843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Guatemala
+  previewText: {fileID: 0}
 --- !u!1 &1725476338
 GameObject:
   m_ObjectHideFlags: 0
@@ -14292,6 +14563,85 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1766583241
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1766583242}
+  - component: {fileID: 1766583244}
+  - component: {fileID: 1766583243}
+  m_Layer: 5
+  m_Name: Text_Country
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1766583242
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766583241}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 27757085}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 284.6, y: 48}
+  m_SizeDelta: {x: 200, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1766583243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766583241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 10
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 1
+    m_MaxSize: 40
+    m_Alignment: 5
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &1766583244
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1766583241}
+  m_CullTransparentMesh: 0
 --- !u!1 &1795636309
 GameObject:
   m_ObjectHideFlags: 0
@@ -14478,6 +14828,7 @@ GameObject:
   - component: {fileID: 1801452884}
   - component: {fileID: 1801452883}
   - component: {fileID: 1801452882}
+  - component: {fileID: 1801452885}
   m_Layer: 5
   m_Name: Flag_5
   m_TagString: Untagged
@@ -14497,7 +14848,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14619,6 +14970,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1801452880}
   m_CullTransparentMesh: 0
+--- !u!114 &1801452885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1801452880}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Belize
+  previewText: {fileID: 0}
 --- !u!1 &1810325703
 GameObject:
   m_ObjectHideFlags: 0
@@ -14789,6 +15154,7 @@ GameObject:
   - component: {fileID: 1833979759}
   - component: {fileID: 1833979758}
   - component: {fileID: 1833979757}
+  - component: {fileID: 1833979760}
   m_Layer: 5
   m_Name: Flag_16
   m_TagString: Untagged
@@ -14808,7 +15174,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -14930,6 +15296,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1833979755}
   m_CullTransparentMesh: 0
+--- !u!114 &1833979760
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1833979755}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Canada
+  previewText: {fileID: 0}
 --- !u!1 &1836764335
 GameObject:
   m_ObjectHideFlags: 0
@@ -15021,6 +15401,7 @@ GameObject:
   - component: {fileID: 1852722561}
   - component: {fileID: 1852722560}
   - component: {fileID: 1852722559}
+  - component: {fileID: 1852722562}
   m_Layer: 5
   m_Name: Flag_4
   m_TagString: Untagged
@@ -15040,7 +15421,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15162,6 +15543,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1852722557}
   m_CullTransparentMesh: 0
+--- !u!114 &1852722562
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1852722557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Greenland
+  previewText: {fileID: 0}
 --- !u!1 &1859652591
 GameObject:
   m_ObjectHideFlags: 0
@@ -15174,6 +15569,7 @@ GameObject:
   - component: {fileID: 1859652595}
   - component: {fileID: 1859652594}
   - component: {fileID: 1859652593}
+  - component: {fileID: 1859652596}
   m_Layer: 5
   m_Name: Flag_11
   m_TagString: Untagged
@@ -15193,7 +15589,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15315,6 +15711,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1859652591}
   m_CullTransparentMesh: 0
+--- !u!114 &1859652596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1859652591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: El Salvador
+  previewText: {fileID: 0}
 --- !u!1 &1876861893
 GameObject:
   m_ObjectHideFlags: 0
@@ -15406,6 +15816,7 @@ GameObject:
   - component: {fileID: 1901349092}
   - component: {fileID: 1901349091}
   - component: {fileID: 1901349090}
+  - component: {fileID: 1901349093}
   m_Layer: 5
   m_Name: Flag_17
   m_TagString: Untagged
@@ -15425,7 +15836,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15547,6 +15958,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1901349088}
   m_CullTransparentMesh: 0
+--- !u!114 &1901349093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1901349088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Nicaragua
+  previewText: {fileID: 0}
 --- !u!1 &1905248187
 GameObject:
   m_ObjectHideFlags: 0
@@ -15559,6 +15984,7 @@ GameObject:
   - component: {fileID: 1905248191}
   - component: {fileID: 1905248190}
   - component: {fileID: 1905248189}
+  - component: {fileID: 1905248192}
   m_Layer: 5
   m_Name: Flag_14
   m_TagString: Untagged
@@ -15578,7 +16004,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -15700,6 +16126,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1905248187}
   m_CullTransparentMesh: 0
+--- !u!114 &1905248192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1905248187}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Saint Kitts and Nevis
+  previewText: {fileID: 0}
 --- !u!1 &1905538207
 GameObject:
   m_ObjectHideFlags: 0
@@ -16336,6 +16776,8 @@ GameObject:
   - component: {fileID: 2009296189}
   - component: {fileID: 2009296188}
   - component: {fileID: 2009296187}
+  - component: {fileID: 2009296191}
+  - component: {fileID: 2009296190}
   m_Layer: 5
   m_Name: Flag_23
   m_TagString: Untagged
@@ -16355,7 +16797,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 27757085}
-  m_RootOrder: 23
+  m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -16477,6 +16919,34 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2009296185}
   m_CullTransparentMesh: 0
+--- !u!114 &2009296190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009296185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Honduras
+  previewText: {fileID: 0}
+--- !u!114 &2009296191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009296185}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 853bdc944ba5fc94d86e591518b5d585, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  countryName: Honduras
+  previewText: {fileID: 0}
 --- !u!1 &2019829441
 GameObject:
   m_ObjectHideFlags: 0

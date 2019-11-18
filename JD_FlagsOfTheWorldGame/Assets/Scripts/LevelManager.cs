@@ -10,12 +10,17 @@ public class LevelManager : MonoBehaviour
     public SpriteRenderer[] NA_Flags;
     public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator, UI_Controls_Animator;
     public bool UI_enabled, UI_Controls_enabled;
+    public Button easy, normal, hard;
 
     // Start is called before the first frame update
     void Start()
     {
         UI_enabled = true;
         UI_Controls_enabled = false;
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            SetDifficulty(difficulty);
+        }
     }
 
     // Update is called once per frame
@@ -67,14 +72,23 @@ public class LevelManager : MonoBehaviour
         if(levelDifficulty == 0)
         {
             difficulty = 0;     //easy
+            easy.GetComponent<Image>().color = Color.green;
+            normal.GetComponent<Image>().color = Color.white;
+            hard.GetComponent<Image>().color = Color.white;
         }
         else if(levelDifficulty == 1)
         {
             difficulty = 1;     //normal
+            easy.GetComponent<Image>().color = Color.white;
+            normal.GetComponent<Image>().color = Color.green;
+            hard.GetComponent<Image>().color = Color.white;
         }
         else if(levelDifficulty == 2)
         {
             difficulty = 2;     //hard
+            easy.GetComponent<Image>().color = Color.white;
+            normal.GetComponent<Image>().color = Color.white;
+            hard.GetComponent<Image>().color = Color.green;
         }
     }
 

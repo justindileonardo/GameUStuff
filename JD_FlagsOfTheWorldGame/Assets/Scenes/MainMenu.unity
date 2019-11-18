@@ -4277,8 +4277,12 @@ MonoBehaviour:
   UI_Holder_Animator: {fileID: 1674838560}
   UI_TitleHolder_Animator: {fileID: 721432576}
   UI_Holder2_Animator: {fileID: 1830401066}
+  UI_Controls_Animator: {fileID: 0}
   UI_enabled: 0
-  Controls: {fileID: 0}
+  UI_Controls_enabled: 0
+  easy: {fileID: 268762049}
+  normal: {fileID: 699666465}
+  hard: {fileID: 158340305}
 --- !u!4 &478619019
 Transform:
   m_ObjectHideFlags: 0
