@@ -22,22 +22,8 @@ public class Submission : MonoBehaviour
     void Start()
     {
         selectionScript = GameObject.Find("SelectionScript").GetComponent<Selection>();
-        if(LevelManager.difficulty == 0)
-        {
-            lives = 10;
-        }
-        else if(LevelManager.difficulty == 1)
-        {
-            lives = 5;
-        }
-        else if(LevelManager.difficulty == 2)
-        {
-            lives = 5;
-        }
-        else if (LevelManager.difficulty == 3)
-        {
-            lives = 1;
-        }
+
+        LivesPerLevel();
         SetLives();
         //testing
         //correctSubmissions = 23;
@@ -178,6 +164,48 @@ public class Submission : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
     }
 
+    public void LivesPerLevel()
+    {
+        if (SceneManager.GetActiveScene().name == "NorthAmerica")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 10;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 5;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 5;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "SouthAmerica")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 5;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 3;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 3;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
+    }
+    
     //adjusting the lives images
     public void SetLives()
     {

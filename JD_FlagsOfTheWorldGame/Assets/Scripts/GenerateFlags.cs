@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 public class GenerateFlags : MonoBehaviour
 {
     public List<Button> flagButtonsStart;
@@ -61,7 +62,15 @@ public class GenerateFlags : MonoBehaviour
                 }
             }
             //flag 12 goes at bottom right
-            flagButtonsRandomized[12].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, -17.5f, 0);
+            if(SceneManager.GetActiveScene().name == "NorthAmerica")
+            {
+                flagButtonsRandomized[12].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, -17.5f, 0);
+            }
+            else if(SceneManager.GetActiveScene().name == "SouthAmerica")
+            {
+                flagButtonsRandomized[12].GetComponent<RectTransform>().anchoredPosition = new Vector3(60, 17.5f, 0);
+            }
+            
 
             //2ND PAGE
             //if flags 0-12
@@ -97,7 +106,11 @@ public class GenerateFlags : MonoBehaviour
             if(i >25)
             {
                 //flag 12 goes at bottom right
-                flagButtonsRandomized[38].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, -17.5f, 0);
+                if(SceneManager.GetActiveScene().name == "NorthAmerica")
+                {
+                    flagButtonsRandomized[38].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, -17.5f, 0);
+                }
+                
             }
             
         }

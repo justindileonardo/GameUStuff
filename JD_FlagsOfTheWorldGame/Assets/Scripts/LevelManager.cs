@@ -7,10 +7,10 @@ public class LevelManager : MonoBehaviour
 {
     public static bool NA_complete, SA_complete, EU_complete, AS_complete, AF_complete, AU_complete;
     public static int difficulty;
-    public SpriteRenderer[] NA_Flags;
+    public SpriteRenderer[] NA_Flags, SA_Flags;
     public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator, UI_Controls_Animator;
     public bool UI_enabled, UI_Controls_enabled;
-    public Button easy, normal, hard, expert;
+    public Button easy, normal, hard, expert, NA, SA, EU, AS, AF, AU;
     public static bool flagPreviews, geographyPreviews;
     public AudioSource menuSound;
     // Start is called before the first frame update
@@ -26,15 +26,24 @@ public class LevelManager : MonoBehaviour
         {
             SetDifficultyFirstTime(difficulty);
         }
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            if (NA_complete == true)
+            {
+                EnableNorthAmericaFlags();
+            }
+            if (SA_complete == true)
+            {
+                EnableSouthAmericaFlags();
+            }
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(NA_complete == true)
-        {
-            EnableNorthAmericaFlags();
-        }
+        
+        
     }
 
     public void CompleteLevel()
@@ -117,6 +126,7 @@ public class LevelManager : MonoBehaviour
             easy.GetComponent<Image>().color = Color.green;
             normal.GetComponent<Image>().color = Color.white;
             hard.GetComponent<Image>().color = Color.white;
+            expert.GetComponent<Image>().color = Color.white;
         }
         else if (levelDifficulty == 1)
         {
@@ -124,6 +134,7 @@ public class LevelManager : MonoBehaviour
             easy.GetComponent<Image>().color = Color.white;
             normal.GetComponent<Image>().color = Color.green;
             hard.GetComponent<Image>().color = Color.white;
+            expert.GetComponent<Image>().color = Color.white;
         }
         else if (levelDifficulty == 2)
         {
@@ -131,6 +142,15 @@ public class LevelManager : MonoBehaviour
             easy.GetComponent<Image>().color = Color.white;
             normal.GetComponent<Image>().color = Color.white;
             hard.GetComponent<Image>().color = Color.green;
+            expert.GetComponent<Image>().color = Color.white;
+        }
+        else if (levelDifficulty == 3)
+        {
+            difficulty = 3;     //expert
+            easy.GetComponent<Image>().color = Color.white;
+            normal.GetComponent<Image>().color = Color.white;
+            hard.GetComponent<Image>().color = Color.white;
+            expert.GetComponent<Image>().color = Color.green;
         }
     }
 
@@ -173,9 +193,18 @@ public class LevelManager : MonoBehaviour
 
     public void EnableNorthAmericaFlags()
     {
+        NA.GetComponent<Image>().color = Color.green;
         for(int i = 0; i < NA_Flags.Length; i++)
         {
             NA_Flags[i].enabled = true;
+        }
+    }
+    public void EnableSouthAmericaFlags()
+    {
+        SA.GetComponent<Image>().color = Color.green;
+        for (int i = 0; i < SA_Flags.Length; i++)
+        {
+            SA_Flags[i].enabled = true;
         }
     }
 
