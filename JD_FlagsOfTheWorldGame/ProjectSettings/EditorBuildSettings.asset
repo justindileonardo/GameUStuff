@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SouthAmerica.unity
     guid: 45ee2485cb9b73c4c8e64c94bf867f68
+  - enabled: 1
+    path: Assets/Scenes/Australia.unity
+    guid: f63c96449bf190440a7953166e93df98
   m_configObjects: {}

@@ -204,6 +204,25 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Australia")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 2;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 2;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 1;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
     }
     
     //adjusting the lives images

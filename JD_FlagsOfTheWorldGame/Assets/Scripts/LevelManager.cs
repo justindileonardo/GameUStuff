@@ -7,7 +7,7 @@ public class LevelManager : MonoBehaviour
 {
     public static bool NA_complete, SA_complete, EU_complete, AS_complete, AF_complete, AU_complete;
     public static int difficulty;
-    public SpriteRenderer[] NA_Flags, SA_Flags;
+    public SpriteRenderer[] NA_Flags, SA_Flags, AU_Flags;
     public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator, UI_Controls_Animator;
     public bool UI_enabled, UI_Controls_enabled;
     public Button easy, normal, hard, expert, NA, SA, EU, AS, AF, AU;
@@ -35,6 +35,10 @@ public class LevelManager : MonoBehaviour
             if (SA_complete == true)
             {
                 EnableSouthAmericaFlags();
+            }
+            if(AU_complete == true)
+            {
+                EnableAustraliaFlags();
             }
         }
     }
@@ -205,6 +209,14 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < SA_Flags.Length; i++)
         {
             SA_Flags[i].enabled = true;
+        }
+    }
+    public void EnableAustraliaFlags()
+    {
+        AU.GetComponent<Image>().color = Color.green;
+        for (int i = 0; i < AU_Flags.Length; i++)
+        {
+            AU_Flags[i].enabled = true;
         }
     }
 
