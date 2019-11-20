@@ -9,7 +9,6 @@ public class GenerateFlags : MonoBehaviour
     public List<Button> flagButtonsRandomized;
     public int amountOfFlags;
     int minX = -360;
-    public Button flagNextPageButton;
     int flagNumber;
     // Start is called before the first frame update
     void Start()

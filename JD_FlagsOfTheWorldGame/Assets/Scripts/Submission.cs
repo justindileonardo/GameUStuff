@@ -14,10 +14,11 @@ public class Submission : MonoBehaviour
     int wrongSubmissions, correctSubmissions;
     public Text text_countryNamePopup, text_wrongSubmissions, text_levelCompleted, text_levelFailed;
     public bool fadingText;
-    public Color flashRed;
+    public Color flashRed, flagUsed;
     public AudioSource successSound, wrongSound, completeLevelSound, failLevelSound;
     public GameObject CompleteLevelButton, RestartLevelButton, MainMenuFailButton;
     public PolygonCollider2D[] countriesColliders;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -106,6 +107,7 @@ public class Submission : MonoBehaviour
             //turn flag color on geography
             countrySpriteColor.enabled = true;
             //disable the flag button
+            EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color = flagUsed;
             EventSystem.current.currentSelectedGameObject.GetComponent<Button>().interactable = false;
         }
         
@@ -170,15 +172,15 @@ public class Submission : MonoBehaviour
         {
             if (LevelManager.difficulty == 0)
             {
-                lives = 10;
+                lives = 15;
             }
             else if (LevelManager.difficulty == 1)
             {
-                lives = 5;
+                lives = 8;
             }
             else if (LevelManager.difficulty == 2)
             {
-                lives = 5;
+                lives = 8;
             }
             else if (LevelManager.difficulty == 3)
             {
@@ -189,15 +191,34 @@ public class Submission : MonoBehaviour
         {
             if (LevelManager.difficulty == 0)
             {
-                lives = 5;
+                lives = 7;
             }
             else if (LevelManager.difficulty == 1)
             {
-                lives = 3;
+                lives = 4;
             }
             else if (LevelManager.difficulty == 2)
             {
-                lives = 3;
+                lives = 4;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Europe")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 20;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 10;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 10;
             }
             else if (LevelManager.difficulty == 3)
             {
@@ -223,154 +244,1059 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
+
     }
     
     //adjusting the lives images
     public void SetLives()
     {
-        if(lives == 0)
-        {
-            lives_hearts[0].SetActive(false);
-            lives_hearts[1].SetActive(false);
-            lives_hearts[2].SetActive(false);
-            lives_hearts[3].SetActive(false);
-            lives_hearts[4].SetActive(false);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if(lives == 1)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(false);
-            lives_hearts[2].SetActive(false);
-            lives_hearts[3].SetActive(false);
-            lives_hearts[4].SetActive(false);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if(lives == 2)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(false);
-            lives_hearts[3].SetActive(false);
-            lives_hearts[4].SetActive(false);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if(lives == 3)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(false);
-            lives_hearts[4].SetActive(false);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 4)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(false);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 5)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(false);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 6)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(true);
-            lives_hearts[6].SetActive(false);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 7)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(true);
-            lives_hearts[6].SetActive(true);
-            lives_hearts[7].SetActive(false);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 8)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(true);
-            lives_hearts[6].SetActive(true);
-            lives_hearts[7].SetActive(true);
-            lives_hearts[8].SetActive(false);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 9)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(true);
-            lives_hearts[6].SetActive(true);
-            lives_hearts[7].SetActive(true);
-            lives_hearts[8].SetActive(true);
-            lives_hearts[9].SetActive(false);
-        }
-        if (lives == 10)
-        {
-            lives_hearts[0].SetActive(true);
-            lives_hearts[1].SetActive(true);
-            lives_hearts[2].SetActive(true);
-            lives_hearts[3].SetActive(true);
-            lives_hearts[4].SetActive(true);
-            lives_hearts[5].SetActive(true);
-            lives_hearts[6].SetActive(true);
-            lives_hearts[7].SetActive(true);
-            lives_hearts[8].SetActive(true);
-            lives_hearts[9].SetActive(true);
-        }
+        if (lives == 0)
+         {
+             lives_hearts[0].SetActive(false);
+         }
+         for (int i = 0; i <= lives_hearts.Length; i++)
+         {
+             if(lives == i)
+             {
+                 if(lives != 0)
+                 {
+                     lives_hearts[i - 1].SetActive(true);
+                 }
+             }
+             else if(lives < i)
+             {
+                 lives_hearts[i-1].SetActive(false);
+             }
+         }
+
+    
+
+
+
+    /*if(lives == 0)
+    {
+        lives_hearts[0].SetActive(false);
+        lives_hearts[1].SetActive(false);
+        lives_hearts[2].SetActive(false);
+        lives_hearts[3].SetActive(false);
+        lives_hearts[4].SetActive(false);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
     }
+    if(lives == 1)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(false);
+        lives_hearts[2].SetActive(false);
+        lives_hearts[3].SetActive(false);
+        lives_hearts[4].SetActive(false);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if(lives == 2)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(false);
+        lives_hearts[3].SetActive(false);
+        lives_hearts[4].SetActive(false);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if(lives == 3)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(false);
+        lives_hearts[4].SetActive(false);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 4)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(false);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 5)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(false);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 6)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(false);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 7)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(false);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 8)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(false);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 9)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(false);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 10)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(false);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 11)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(false);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 12)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(false);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 13)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(false);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 14)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(false);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 15)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(false);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 16)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(false);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 17)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(false);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 18)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(false);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 19)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(false);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 20)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(false);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 21)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(false);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 22)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(false);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 23)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(false);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 24)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(false);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 25)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(false);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 26)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(true);
+        lives_hearts[26].SetActive(false);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 27)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(true);
+        lives_hearts[26].SetActive(true);
+        lives_hearts[27].SetActive(false);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 28)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(true);
+        lives_hearts[26].SetActive(true);
+        lives_hearts[27].SetActive(true);
+        lives_hearts[28].SetActive(false);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 29)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(true);
+        lives_hearts[26].SetActive(true);
+        lives_hearts[27].SetActive(true);
+        lives_hearts[28].SetActive(true);
+        lives_hearts[29].SetActive(false);
+    }
+    if (lives == 30)
+    {
+        lives_hearts[0].SetActive(true);
+        lives_hearts[1].SetActive(true);
+        lives_hearts[2].SetActive(true);
+        lives_hearts[3].SetActive(true);
+        lives_hearts[4].SetActive(true);
+        lives_hearts[5].SetActive(true);
+        lives_hearts[6].SetActive(true);
+        lives_hearts[7].SetActive(true);
+        lives_hearts[8].SetActive(true);
+        lives_hearts[9].SetActive(true);
+        lives_hearts[10].SetActive(true);
+        lives_hearts[11].SetActive(true);
+        lives_hearts[12].SetActive(true);
+        lives_hearts[13].SetActive(true);
+        lives_hearts[14].SetActive(true);
+        lives_hearts[15].SetActive(true);
+        lives_hearts[16].SetActive(true);
+        lives_hearts[17].SetActive(true);
+        lives_hearts[18].SetActive(true);
+        lives_hearts[19].SetActive(true);
+        lives_hearts[20].SetActive(true);
+        lives_hearts[21].SetActive(true);
+        lives_hearts[22].SetActive(true);
+        lives_hearts[23].SetActive(true);
+        lives_hearts[24].SetActive(true);
+        lives_hearts[25].SetActive(true);
+        lives_hearts[26].SetActive(true);
+        lives_hearts[27].SetActive(true);
+        lives_hearts[28].SetActive(true);
+        lives_hearts[29].SetActive(true);
+    }
+    */
+}
     
 }
