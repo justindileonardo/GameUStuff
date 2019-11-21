@@ -46,7 +46,7 @@ public class Submission : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
-
+        print(EventSystem.current.currentSelectedGameObject);
     }
     //when you click the button of a flag
     public void MakeSubmission(GameObject correctCountry)
@@ -107,7 +107,7 @@ public class Submission : MonoBehaviour
             //turn flag color on geography
             countrySpriteColor.enabled = true;
             //disable the flag button
-            EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color = flagUsed;
+            //EventSystem.current.currentSelectedGameObject.GetComponent<Image>().color = flagUsed;
             EventSystem.current.currentSelectedGameObject.GetComponent<Button>().interactable = false;
         }
         
