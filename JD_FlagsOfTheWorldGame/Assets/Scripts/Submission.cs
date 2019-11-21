@@ -46,7 +46,7 @@ public class Submission : MonoBehaviour
         {
             SceneManager.LoadScene("MainMenu");
         }
-        print(EventSystem.current.currentSelectedGameObject);
+
     }
     //when you click the button of a flag
     public void MakeSubmission(GameObject correctCountry)
