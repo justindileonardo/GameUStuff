@@ -78,6 +78,12 @@ public class GenerateFlags : MonoBehaviour
                 flagButtonsRandomized[13].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, 17.5f, 0);
                 //flagButtonsRandomized[25].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
             }
+            else if (SceneManager.GetActiveScene().name == "Asia")
+            {
+                flagButtonsRandomized[12].GetComponent<RectTransform>().anchoredPosition = new Vector3(240, 17.5f, 0);
+                flagButtonsRandomized[13].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, 17.5f, 0);
+                //flagButtonsRandomized[25].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
+            }
 
 
             //2ND PAGE
@@ -123,6 +129,14 @@ public class GenerateFlags : MonoBehaviour
                     flagButtonsRandomized[38].GetComponent<RectTransform>().anchoredPosition = new Vector3(240, -17.5f, 0);
                     flagButtonsRandomized[39].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, -17.5f, 0);
                 }
+                else if (SceneManager.GetActiveScene().name == "Asia")
+                {
+                    flagButtonsRandomized[38].GetComponent<RectTransform>().anchoredPosition = new Vector3(240, -17.5f, 0);
+                    flagButtonsRandomized[39].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, -17.5f, 0);
+                    flagButtonsRandomized[44].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
+                    flagButtonsRandomized[45].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, -17.5f, 0);
+
+                }
 
             }
             
@@ -161,7 +175,43 @@ public class GenerateFlags : MonoBehaviour
                 }
             }
         }
-        
+        else if (SceneManager.GetActiveScene().name == "Asia")
+        {
+            for (int i = 0; i < flagButtonsRandomized.Count; i++)
+            {
+
+                if (i <= 24)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = true;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[45].enabled = true;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                }
+                else if (i >= 25 && i <= 49)
+                {
+                    flagButtonsRandomized[i].enabled = true;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[18].enabled = true;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[20].enabled = true;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = true;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[45].enabled = true;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                }
+            }
+        }
     }
     public void GoBackPage()
     {
@@ -193,7 +243,43 @@ public class GenerateFlags : MonoBehaviour
                 }
             }
         }
-            
+
+        else if (SceneManager.GetActiveScene().name == "Asia")
+        {
+            for (int i = 0; i < flagButtonsRandomized.Count; i++)
+            {
+                if (i <= 24)
+                {
+                    flagButtonsRandomized[i].enabled = true;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[18].enabled = true;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = true;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                }
+                else if (i >= 25 && i <= 49)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = true;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                }
+            }
+        }
     }
 
     

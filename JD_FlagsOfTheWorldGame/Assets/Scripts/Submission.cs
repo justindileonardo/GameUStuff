@@ -244,6 +244,25 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Asia")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 25;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 13;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 13;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
 
     }
     
