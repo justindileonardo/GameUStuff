@@ -263,6 +263,25 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Africa")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 30;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 17;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 17;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
 
     }
     

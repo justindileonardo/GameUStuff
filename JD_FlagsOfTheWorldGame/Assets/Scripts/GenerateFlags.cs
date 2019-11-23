@@ -10,12 +10,18 @@ public class GenerateFlags : MonoBehaviour
     public int amountOfFlags;
     int minX = -360;
     int flagNumber;
+    public GameObject upToPage2, upToPage3, downToPage1, downToPage2;
     // Start is called before the first frame update
     void Start()
     {
         amountOfFlags = flagButtonsStart.Count;
         Invoke("SetRandomFlagPositions", 1);
         Invoke("GoBackPage", 2f);
+        if(SceneManager.GetActiveScene().name == "Africa")
+        {
+            upToPage3.SetActive(false);
+            downToPage2.SetActive(false);
+        }
     }
 
     // Update is called once per frame
@@ -84,7 +90,12 @@ public class GenerateFlags : MonoBehaviour
                 flagButtonsRandomized[13].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, 17.5f, 0);
                 //flagButtonsRandomized[25].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
             }
-
+            else if (SceneManager.GetActiveScene().name == "Africa")
+            {
+                flagButtonsRandomized[12].GetComponent<RectTransform>().anchoredPosition = new Vector3(240, 17.5f, 0);
+                flagButtonsRandomized[13].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, 17.5f, 0);
+                //flagButtonsRandomized[25].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
+            }
 
             //2ND PAGE
             //if flags 0-12
@@ -136,6 +147,21 @@ public class GenerateFlags : MonoBehaviour
                     flagButtonsRandomized[44].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
                     flagButtonsRandomized[45].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, -17.5f, 0);
 
+                }
+                else if (SceneManager.GetActiveScene().name == "Africa")
+                {
+                    flagButtonsRandomized[38].GetComponent<RectTransform>().anchoredPosition = new Vector3(240, -17.5f, 0);
+                    flagButtonsRandomized[39].GetComponent<RectTransform>().anchoredPosition = new Vector3(180, -17.5f, 0);
+                    flagButtonsRandomized[44].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, 17.5f, 0);
+                    flagButtonsRandomized[45].GetComponent<RectTransform>().anchoredPosition = new Vector3(300, -17.5f, 0);
+                    flagButtonsRandomized[46].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, 17.5f, 0);
+                    flagButtonsRandomized[47].GetComponent<RectTransform>().anchoredPosition = new Vector3(360, -17.5f, 0);
+                    flagButtonsRandomized[48].GetComponent<RectTransform>().anchoredPosition = new Vector3(-360, 17.5f, 0);
+                    flagButtonsRandomized[49].GetComponent<RectTransform>().anchoredPosition = new Vector3(-360, -17.5f, 0);
+                    flagButtonsRandomized[50].GetComponent<RectTransform>().anchoredPosition = new Vector3(-300, 17.5f, 0);
+                    flagButtonsRandomized[51].GetComponent<RectTransform>().anchoredPosition = new Vector3(-300, -17.5f, 0);
+                    flagButtonsRandomized[52].GetComponent<RectTransform>().anchoredPosition = new Vector3(-240, 17.5f, 0);
+                    flagButtonsRandomized[53].GetComponent<RectTransform>().anchoredPosition = new Vector3(-240, -17.5f, 0);
                 }
 
             }
@@ -194,6 +220,8 @@ public class GenerateFlags : MonoBehaviour
                     flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
                     flagButtonsRandomized[45].enabled = true;
                     flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[45].enabled = true;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
                 }
                 else if (i >= 25 && i <= 49)
                 {
@@ -209,6 +237,72 @@ public class GenerateFlags : MonoBehaviour
                     flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
                     flagButtonsRandomized[45].enabled = true;
                     flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Africa")
+        {
+            //go to page 2
+            upToPage2.SetActive(false);
+            upToPage3.SetActive(true);
+            downToPage1.SetActive(true);
+            downToPage2.SetActive(false);
+            for (int i = 0; i < flagButtonsRandomized.Count; i++)
+            {
+
+                if (i <= 24)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = true;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[45].enabled = true;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[46].enabled = true;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[47].enabled = true;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = true;
+                }
+                else if (i >= 25 && i <= 49)
+                {
+                    flagButtonsRandomized[i].enabled = true;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[18].enabled = true;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[20].enabled = true;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = true;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[45].enabled = true;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[46].enabled = true;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[47].enabled = true;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = true;
+                }
+                //page 3s off
+                if(i > 25)
+                {
+                    flagButtonsRandomized[48].enabled = false;
+                    flagButtonsRandomized[48].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[49].enabled = false;
+                    flagButtonsRandomized[49].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[50].enabled = false;
+                    flagButtonsRandomized[50].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[51].enabled = false;
+                    flagButtonsRandomized[51].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[52].enabled = false;
+                    flagButtonsRandomized[52].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[53].enabled = false;
+                    flagButtonsRandomized[53].GetComponent<Image>().enabled = false;
                 }
             }
         }
@@ -280,7 +374,144 @@ public class GenerateFlags : MonoBehaviour
                 }
             }
         }
+        else if (SceneManager.GetActiveScene().name == "Africa")
+        {
+            //go to page 1
+            upToPage2.SetActive(true);
+            upToPage3.SetActive(false);
+            downToPage1.SetActive(true);
+            downToPage2.SetActive(false);
+
+            for (int i = 0; i < flagButtonsRandomized.Count; i++)
+            {
+                if (i <= 24)
+                {
+                    flagButtonsRandomized[i].enabled = true;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[18].enabled = true;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = true;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[46].enabled = false;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[47].enabled = false;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = false;
+                }
+                else if (i >= 25 && i <= 49)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = true;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[46].enabled = false;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[47].enabled = false;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = false;
+                }
+                //page 3s off
+                if (i > 25)
+                {
+                    flagButtonsRandomized[48].enabled = false;
+                    flagButtonsRandomized[48].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[49].enabled = false;
+                    flagButtonsRandomized[49].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[50].enabled = false;
+                    flagButtonsRandomized[50].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[51].enabled = false;
+                    flagButtonsRandomized[51].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[52].enabled = false;
+                    flagButtonsRandomized[52].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[53].enabled = false;
+                    flagButtonsRandomized[53].GetComponent<Image>().enabled = false;
+                }
+            }
+        }
     }
+
+    public void GoUpToPage3()
+    {
+        if (SceneManager.GetActiveScene().name == "Africa")
+        {
+            //go to page 3
+            upToPage2.SetActive(false);
+            upToPage3.SetActive(true);
+            downToPage1.SetActive(false);
+            downToPage2.SetActive(true);
+            for (int i = 0; i < flagButtonsRandomized.Count; i++)
+            {
+
+                if (i <= 24)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[46].enabled = false;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[47].enabled = false;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = false;
+                }
+                else if (i >= 25 && i <= 49)
+                {
+                    flagButtonsRandomized[i].enabled = false;
+                    flagButtonsRandomized[i].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[18].enabled = false;
+                    flagButtonsRandomized[18].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[20].enabled = false;
+                    flagButtonsRandomized[20].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[25].enabled = false;
+                    flagButtonsRandomized[25].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[44].enabled = false;
+                    flagButtonsRandomized[44].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[45].enabled = false;
+                    flagButtonsRandomized[45].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[46].enabled = false;
+                    flagButtonsRandomized[46].GetComponent<Image>().enabled = false;
+                    flagButtonsRandomized[47].enabled = false;
+                    flagButtonsRandomized[47].GetComponent<Image>().enabled = false;
+                }
+                //page 3s off
+                if (i > 25)
+                {
+                    flagButtonsRandomized[48].enabled = true;
+                    flagButtonsRandomized[48].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[49].enabled = true;
+                    flagButtonsRandomized[49].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[50].enabled = true;
+                    flagButtonsRandomized[50].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[51].enabled = true;
+                    flagButtonsRandomized[51].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[52].enabled = true;
+                    flagButtonsRandomized[52].GetComponent<Image>().enabled = true;
+                    flagButtonsRandomized[53].enabled = true;
+                    flagButtonsRandomized[53].GetComponent<Image>().enabled = true;
+                }
+            }
+        }
+    }
+
 
     
 }
