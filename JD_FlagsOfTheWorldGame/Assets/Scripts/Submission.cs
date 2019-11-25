@@ -172,44 +172,6 @@ public class Submission : MonoBehaviour
         {
             if (LevelManager.difficulty == 0)
             {
-                lives = 15;
-            }
-            else if (LevelManager.difficulty == 1)
-            {
-                lives = 8;
-            }
-            else if (LevelManager.difficulty == 2)
-            {
-                lives = 8;
-            }
-            else if (LevelManager.difficulty == 3)
-            {
-                lives = 1;
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "SouthAmerica")
-        {
-            if (LevelManager.difficulty == 0)
-            {
-                lives = 7;
-            }
-            else if (LevelManager.difficulty == 1)
-            {
-                lives = 4;
-            }
-            else if (LevelManager.difficulty == 2)
-            {
-                lives = 4;
-            }
-            else if (LevelManager.difficulty == 3)
-            {
-                lives = 1;
-            }
-        }
-        else if (SceneManager.GetActiveScene().name == "Europe")
-        {
-            if (LevelManager.difficulty == 0)
-            {
                 lives = 20;
             }
             else if (LevelManager.difficulty == 1)
@@ -225,26 +187,26 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "Australia")
+        else if (SceneManager.GetActiveScene().name == "SouthAmerica")
         {
             if (LevelManager.difficulty == 0)
             {
-                lives = 2;
+                lives = 10;
             }
             else if (LevelManager.difficulty == 1)
             {
-                lives = 2;
+                lives = 5;
             }
             else if (LevelManager.difficulty == 2)
             {
-                lives = 1;
+                lives = 5;
             }
             else if (LevelManager.difficulty == 3)
             {
                 lives = 1;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "Asia")
+        else if (SceneManager.GetActiveScene().name == "Europe")
         {
             if (LevelManager.difficulty == 0)
             {
@@ -263,7 +225,26 @@ public class Submission : MonoBehaviour
                 lives = 1;
             }
         }
-        else if (SceneManager.GetActiveScene().name == "Africa")
+        else if (SceneManager.GetActiveScene().name == "Australia")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 3;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 2;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 2;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Asia")
         {
             if (LevelManager.difficulty == 0)
             {
@@ -271,11 +252,30 @@ public class Submission : MonoBehaviour
             }
             else if (LevelManager.difficulty == 1)
             {
-                lives = 17;
+                lives = 20;
             }
             else if (LevelManager.difficulty == 2)
             {
-                lives = 17;
+                lives = 20;
+            }
+            else if (LevelManager.difficulty == 3)
+            {
+                lives = 1;
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "Africa")
+        {
+            if (LevelManager.difficulty == 0)
+            {
+                lives = 40;
+            }
+            else if (LevelManager.difficulty == 1)
+            {
+                lives = 25;
+            }
+            else if (LevelManager.difficulty == 2)
+            {
+                lives = 25;
             }
             else if (LevelManager.difficulty == 3)
             {

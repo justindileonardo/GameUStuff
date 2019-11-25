@@ -7,15 +7,25 @@ public class LevelManager : MonoBehaviour
 {
     public static bool NA_complete, SA_complete, EU_complete, AS_complete, AF_complete, AU_complete;
     public static int difficulty;
-    public SpriteRenderer[] NA_Flags, SA_Flags, AU_Flags, EU_Flags, AS_Flags;
-    public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator, UI_Controls_Animator;
+    public SpriteRenderer[] NA_Flags, SA_Flags, AU_Flags, EU_Flags, AS_Flags, AF_Flags;
+    public Animator UI_Holder_Animator, UI_TitleHolder_Animator, UI_Holder2_Animator, UI_Controls_Animator, UI_TextWinner_Animator;
     public bool UI_enabled, UI_Controls_enabled;
     public Button easy, normal, hard, expert, NA, SA, EU, AS, AF, AU;
     public static bool flagPreviews, geographyPreviews;
     public AudioSource menuSound;
+    public Text winnerText;
     // Start is called before the first frame update
     void Start()
     {
+        /*
+        //testing winner text
+        NA_complete = true;
+        SA_complete = true;
+        EU_complete = true;
+        AS_complete = true;
+        AF_complete = true;
+        AU_complete = true;
+        */
 
         flagPreviews = false;
         geographyPreviews = true;
@@ -47,6 +57,17 @@ public class LevelManager : MonoBehaviour
             if(AS_complete == true)
             {
                 EnableAsiaFlags();
+            }
+            if(AF_complete == true)
+            {
+                EnableAfricaFlags();
+            }
+            if(NA_complete && SA_complete && AU_complete && EU_complete && AS_complete && AF_complete)
+            {
+                winnerText.enabled = true;
+            } else
+            {
+                winnerText.enabled = false;
             }
         }
     }
@@ -174,6 +195,7 @@ public class LevelManager : MonoBehaviour
             UI_Holder_Animator.SetBool("UI_Holder_Enabled", false);
             UI_TitleHolder_Animator.SetBool("UI_TitleHolder_Enabled", false);
             UI_Holder2_Animator.SetBool("UI_Holder2_Enabled", false);
+            UI_TextWinner_Animator.SetBool("UI_TextWinner_Enabled", false);
         }
         else if(UI_enabled == false)
         {
@@ -181,6 +203,7 @@ public class LevelManager : MonoBehaviour
             UI_Holder_Animator.SetBool("UI_Holder_Enabled", true);
             UI_TitleHolder_Animator.SetBool("UI_TitleHolder_Enabled", true);
             UI_Holder2_Animator.SetBool("UI_Holder2_Enabled", true);
+            UI_TextWinner_Animator.SetBool("UI_TextWinner_Enabled", true);
         }
     }
 
@@ -243,6 +266,13 @@ public class LevelManager : MonoBehaviour
             AS_Flags[i].enabled = true;
         }
     }
-
+    public void EnableAfricaFlags()
+    {
+        AF.GetComponent<Image>().color = Color.green;
+        for (int i = 0; i < AF_Flags.Length; i++)
+        {
+            AF_Flags[i].enabled = true;
+        }
+    }
 
 }

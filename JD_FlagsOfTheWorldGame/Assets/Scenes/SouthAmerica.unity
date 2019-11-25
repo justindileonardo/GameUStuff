@@ -3518,6 +3518,8 @@ MonoBehaviour:
   SA_Flags: []
   AU_Flags: []
   EU_Flags: []
+  AS_Flags: []
+  AF_Flags: []
   UI_Holder_Animator: {fileID: 0}
   UI_TitleHolder_Animator: {fileID: 0}
   UI_Holder2_Animator: {fileID: 0}
@@ -8754,7 +8756,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1376371212
 RectTransform:
   m_ObjectHideFlags: 0
@@ -10375,6 +10377,10 @@ MonoBehaviour:
   - {fileID: 1905248189}
   flagButtonsRandomized: []
   amountOfFlags: 0
+  upToPage2: {fileID: 0}
+  upToPage3: {fileID: 0}
+  downToPage1: {fileID: 0}
+  downToPage2: {fileID: 0}
 --- !u!4 &1558721223
 Transform:
   m_ObjectHideFlags: 0
