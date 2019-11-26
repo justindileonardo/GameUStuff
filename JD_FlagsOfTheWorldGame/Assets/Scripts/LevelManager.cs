@@ -14,6 +14,7 @@ public class LevelManager : MonoBehaviour
     public static bool flagPreviews, geographyPreviews;
     public AudioSource menuSound;
     public Text winnerText;
+    public Image[] starsNA, starsSA, starsEU, starsAS, starsAU, starsAF;
     // Start is called before the first frame update
     void Start()
     {
@@ -233,6 +234,23 @@ public class LevelManager : MonoBehaviour
         {
             NA_Flags[i].enabled = true;
         }
+        switch(difficulty)
+        {
+            case 1:
+                starsNA[0].enabled = true;
+                break;
+            case 2:
+                starsNA[0].enabled = true;
+                starsNA[1].enabled = true;
+                break;
+            case 3:
+                starsNA[0].enabled = true;
+                starsNA[1].enabled = true;
+                starsNA[2].enabled = true;
+                break;
+            default:
+                break;
+        }
     }
     public void EnableSouthAmericaFlags()
     {
@@ -240,6 +258,23 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < SA_Flags.Length; i++)
         {
             SA_Flags[i].enabled = true;
+        }
+        switch (difficulty)
+        {
+            case 1:
+                starsSA[0].enabled = true;
+                break;
+            case 2:
+                starsSA[0].enabled = true;
+                starsSA[1].enabled = true;
+                break;
+            case 3:
+                starsSA[0].enabled = true;
+                starsSA[1].enabled = true;
+                starsSA[2].enabled = true;
+                break;
+            default:
+                break;
         }
     }
     public void EnableAustraliaFlags()
@@ -249,6 +284,23 @@ public class LevelManager : MonoBehaviour
         {
             AU_Flags[i].enabled = true;
         }
+        switch (difficulty)
+        {
+            case 1:
+                starsAU[0].enabled = true;
+                break;
+            case 2:
+                starsAU[0].enabled = true;
+                starsAU[1].enabled = true;
+                break;
+            case 3:
+                starsAU[0].enabled = true;
+                starsAU[1].enabled = true;
+                starsAU[2].enabled = true;
+                break;
+            default:
+                break;
+        }
     }
     public void EnableEuropeFlags()
     {
@@ -256,6 +308,23 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < EU_Flags.Length; i++)
         {
             EU_Flags[i].enabled = true;
+        }
+        switch (difficulty)
+        {
+            case 1:
+                starsEU[0].enabled = true;
+                break;
+            case 2:
+                starsEU[0].enabled = true;
+                starsEU[1].enabled = true;
+                break;
+            case 3:
+                starsEU[0].enabled = true;
+                starsEU[1].enabled = true;
+                starsEU[2].enabled = true;
+                break;
+            default:
+                break;
         }
     }
     public void EnableAsiaFlags()
@@ -265,6 +334,23 @@ public class LevelManager : MonoBehaviour
         {
             AS_Flags[i].enabled = true;
         }
+        switch (difficulty)
+        {
+            case 1:
+                starsAS[0].enabled = true;
+                break;
+            case 2:
+                starsAS[0].enabled = true;
+                starsAS[1].enabled = true;
+                break;
+            case 3:
+                starsAS[0].enabled = true;
+                starsAS[1].enabled = true;
+                starsAS[2].enabled = true;
+                break;
+            default:
+                break;
+        }
     }
     public void EnableAfricaFlags()
     {
@@ -272,6 +358,23 @@ public class LevelManager : MonoBehaviour
         for (int i = 0; i < AF_Flags.Length; i++)
         {
             AF_Flags[i].enabled = true;
+        }
+        switch (difficulty)
+        {
+            case 1:
+                starsAF[0].enabled = true;
+                break;
+            case 2:
+                starsAF[0].enabled = true;
+                starsAF[1].enabled = true;
+                break;
+            case 3:
+                starsAF[0].enabled = true;
+                starsAF[1].enabled = true;
+                starsAF[2].enabled = true;
+                break;
+            default:
+                break;
         }
     }
 
