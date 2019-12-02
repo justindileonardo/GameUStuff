@@ -15,6 +15,7 @@ public class LevelManager : MonoBehaviour
     public AudioSource menuSound;
     public Text winnerText;
     public Image[] starsNA, starsSA, starsEU, starsAS, starsAU, starsAF;
+    public static int NA_starsEarned, SA_starsEarned, EU_starsEarned, AS_starsEarned, AF_starsEarned, AU_starsEarned;
     // Start is called before the first frame update
     void Start()
     {
@@ -85,26 +86,110 @@ public class LevelManager : MonoBehaviour
         if(SceneManager.GetActiveScene().name == "NorthAmerica")
         {
             NA_complete = true;
+            switch(difficulty)
+            {
+                case 1:
+                    NA_starsEarned = 1;
+                    break;
+                case 2:
+                    NA_starsEarned = 2;
+                    break;
+                case 3:
+                    NA_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         else if(SceneManager.GetActiveScene().name == "SouthAmerica")
         {
             SA_complete = true;
+            switch (difficulty)
+            {
+                case 1:
+                    SA_starsEarned = 1;
+                    break;
+                case 2:
+                    SA_starsEarned = 2;
+                    break;
+                case 3:
+                    SA_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         else if(SceneManager.GetActiveScene().name == "Europe")
         {
             EU_complete = true;
+            switch (difficulty)
+            {
+                case 1:
+                    EU_starsEarned = 1;
+                    break;
+                case 2:
+                    EU_starsEarned = 2;
+                    break;
+                case 3:
+                    EU_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         else if(SceneManager.GetActiveScene().name == "Asia")
         {
             AS_complete = true;
+            switch (difficulty)
+            {
+                case 1:
+                    AS_starsEarned = 1;
+                    break;
+                case 2:
+                    AS_starsEarned = 2;
+                    break;
+                case 3:
+                    AS_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         else if(SceneManager.GetActiveScene().name == "Africa")
         {
             AF_complete = true;
+            switch (difficulty)
+            {
+                case 1:
+                    AF_starsEarned = 1;
+                    break;
+                case 2:
+                    AF_starsEarned = 2;
+                    break;
+                case 3:
+                    AF_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         else if(SceneManager.GetActiveScene().name == "Australia")
         {
             AU_complete = true;
+            switch (difficulty)
+            {
+                case 1:
+                    AU_starsEarned = 1;
+                    break;
+                case 2:
+                    AU_starsEarned = 2;
+                    break;
+                case 3:
+                    AU_starsEarned = 3;
+                    break;
+                default:
+                    break;
+            }
         }
         SceneManager.LoadScene("MainMenu");
     }
@@ -234,7 +319,7 @@ public class LevelManager : MonoBehaviour
         {
             NA_Flags[i].enabled = true;
         }
-        switch(difficulty)
+        switch(NA_starsEarned)
         {
             case 1:
                 starsNA[0].enabled = true;
@@ -259,7 +344,7 @@ public class LevelManager : MonoBehaviour
         {
             SA_Flags[i].enabled = true;
         }
-        switch (difficulty)
+        switch (SA_starsEarned)
         {
             case 1:
                 starsSA[0].enabled = true;
@@ -284,7 +369,7 @@ public class LevelManager : MonoBehaviour
         {
             AU_Flags[i].enabled = true;
         }
-        switch (difficulty)
+        switch (AU_starsEarned)
         {
             case 1:
                 starsAU[0].enabled = true;
@@ -309,7 +394,7 @@ public class LevelManager : MonoBehaviour
         {
             EU_Flags[i].enabled = true;
         }
-        switch (difficulty)
+        switch (EU_starsEarned)
         {
             case 1:
                 starsEU[0].enabled = true;
@@ -334,7 +419,7 @@ public class LevelManager : MonoBehaviour
         {
             AS_Flags[i].enabled = true;
         }
-        switch (difficulty)
+        switch (AS_starsEarned)
         {
             case 1:
                 starsAS[0].enabled = true;
@@ -359,7 +444,7 @@ public class LevelManager : MonoBehaviour
         {
             AF_Flags[i].enabled = true;
         }
-        switch (difficulty)
+        switch (AF_starsEarned)
         {
             case 1:
                 starsAF[0].enabled = true;
